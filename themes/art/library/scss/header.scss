@@ -1,0 +1,224 @@
+.header {
+font-size: 12px;
+}
+
+$border-color:  #268cb9;
+
+#top-blue-link-banner {
+	background: #005285;
+	height: 55px;
+	margin-top: 29px;
+	color:white;
+	font-family:  Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 500;
+	z-index: 999;
+	position: relative;
+	
+	-webkit-box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+-moz-box-shadow:    0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+	border: lighten(#005285, 20) 1px solid;
+	
+	.blue-border {
+		border-right: 1px solid $border-color;
+	
+	}
+	
+	
+	#transit-name {
+		float: left;
+		margin-left: 240px;
+		padding-left: 10px;
+		color: white;
+		font-size: 1.3em;
+		text-transform: uppercase;
+		line-height: 54px;
+		padding-right: 1%;
+	}
+
+
+	#inner-content {
+		width: 1151px;
+	}
+
+	#desktop-main-links {
+	ul {
+		padding: 0;
+		margin: 0;
+		float: left;
+		width: 50%;
+		li {
+			z-index: 250;
+			position: relative;
+			
+			float: left;
+			height: 55px;
+		
+			
+			
+			a:link, a:active, a:visited, a:hover {
+				color:white;
+				text-decoration: none;
+				line-height: 55px;
+				
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			
+			ul {
+   					
+   					position: absolute;
+   					top: -99999px;
+   					z-index: 300;
+   				}
+			
+		}
+		
+		li:hover {
+			position:relative;
+			
+
+			background-color: lighten(#005285, 5);
+			cursor: pointer;
+			
+			-webkit-stroke-width: 5.3px;
+   -webkit-stroke-color: #FFFFFF;
+   -webkit-fill-color: #FFFFFF;
+   text-shadow: 1px 0px 20px white;
+   -webkit-transition: width 0.3s; /*Safari & Chrome*/
+   transition: width 0.3s;
+   -moz-transition: width 0.3s; /* Firefox 4 */
+   -o-transition: width 0.3s; /* Opera */
+   
+   			
+   				ul {
+   					
+   					position: absolute;
+   					top: 55px;
+   					width:250px;
+   					border-right: 1px solid lighten($border-color,5);
+   					border-left: 1px solid lighten($border-color,5);
+   					border-bottom: 1px solid lighten($border-color,5);
+					right: -1px;
+					background-color: lighten(#005285, 5);
+					-webkit-box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+					-moz-box-shadow:    0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+					box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+					
+					
+						li {
+							width: 100%;
+							padding: 10px;
+							
+							
+						
+						}
+						li:hover {
+							width: 100%;
+							padding: 10px;
+							background-color: lighten(#005285, 10);
+							
+						
+						}
+					
+   				}
+		}
+		
+		
+		li#get-passes-link, li#how-to-ride-link,li#routes-and-schedules-link  {
+			
+			font-size: 1em;
+			padding-right: 3%;
+				padding-left: 3%;
+		
+		}
+		
+		/*@media only screen and (min-width: 1220px) {
+			li#get-passes-link, li#how-to-ride-link  {
+			
+				font-size: 1.2em;
+				padding-right: 5%;
+				padding-left: 5%;
+		
+			}
+		}*/
+		
+		li#get-passes-link {
+			i {
+				float: left;
+				background-image: url(../images/art-sprites.png);
+				background-position: -262px -4px;
+				width: 30px;
+				height: 30px;
+				position: relative;
+				top: 15px;
+			}
+			a:link, a:active, a:visited, a:hover {
+				color: #ffd879;
+			}
+		
+		}
+		li#get-passes-link:hover {
+			i {	
+				background-position: -262px -34px;
+	
+			}
+		}
+		
+		li#how-to-ride-link {
+			i {
+				float: left;
+				background-image: url(../images/art-sprites.png);
+				background-position: -293px -4px;
+				width: 30px;
+				height: 30px;
+				margin-right: 6px;
+				position: relative;
+				top: 15px;
+			}
+			a:link, a:active, a:visited, a:hover {
+				color: white;
+			}
+		
+		}
+		li#how-to-ride-link:hover {
+			i {
+				
+				background-position: -293px -34px;
+			
+			}
+		}
+		
+		}
+	}
+
+	
+	#phone-number {
+		//float: right;
+		line-height: 25px;
+		font-size: 20px;
+		//margin-right: 20px;
+		position: fixed; 
+		top: 0;
+		right: 0;
+		a:link, a:active, a:visited{
+			color: white;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		} 
+	}
+}
+
+@media only screen and (min-width: 1220px) {
+	#top-blue-link-banner {
+		#transit-name {
+			margin-left: 254px;
+			//font-size: 1.7em;
+			padding-right: 2.7%;
+	
+		}
+	}
+
+} // end of media query

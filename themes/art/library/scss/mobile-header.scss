@@ -1,0 +1,231 @@
+
+
+.mobile-all {
+
+i {
+
+	
+}
+	
+	.header {
+font-size: 12px;
+}
+
+#logo {
+	background-position: -127.5px -37.5px;
+	height: 110px; 
+	left: 0px;
+	position: absolute; 
+	background-size: 350px 350px;
+}
+
+@media only screen and (min-width: 500px) {
+	#logo {
+		background-position: -191.25px -86.25px; 
+		 background-size: 525px 525px;
+	
+} 
+}
+
+
+#top-blue-link-banner {
+	background: #005285;
+	float: left;
+	margin-top: 0;
+	color:white;
+	height: 80px; 
+	width: 100%;
+	font-family:  Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 500;
+	z-index: 999;
+	position: relative;
+	padding: 0;
+	
+	-webkit-box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+-moz-box-shadow:    0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
+	border: lighten(#005285, 20) 1px solid;
+	border: 0;
+	border-bottom: 1px solid #4c96c3;
+	
+	.blue-border {
+		border-right: 1px solid #268cb9;
+	
+	}
+	
+	
+	#transit-name {
+		float: right;
+		text-align: right;
+		color: #dff3ff;
+		font-size: 1em; 
+		width: 100%;
+		line-height: 1.4em;
+		padding-top: 17px;
+		text-transform: uppercase;
+	}
+	
+	#transit-motto {
+		float: right;
+		text-align: right;
+		color: #dff3ff;
+		font-size: .8em;
+		width: 75%;
+		padding-right: 5px;
+		text-transform: uppercase;
+	}
+
+
+	#inner-content {
+		width: 1151px;
+	}
+}
+	#mobile-top-bar-links {
+	
+	border-bottom: 1px solid #4c96c3;
+	ul {
+		padding: 0;
+		margin: 0;
+		float: left;
+		width: 100%;
+		clear: both;
+		
+		.mobile-icon-holder {
+		margin: 0 auto;	
+		}
+		
+		
+		i {
+		display:inline-block;
+		display: relative;
+			
+
+			
+		}
+		
+		li {
+			
+			float: left;
+			width: 32.33333333%;
+			text-align: center;
+			padding-top: 10px;
+		
+			
+			
+			a:link, a:active, a:visited, a:hover {
+				color:white;
+				text-decoration: none;
+				
+				
+				
+				letter-spacing: .5px;
+			}
+			
+			
+			
+		}
+		
+		li:hover {
+			background-color: lighten(#005285, 5);
+			cursor: pointer;
+			
+			-webkit-stroke-width: 5.3px;
+		   -webkit-stroke-color: #FFFFFF;
+		   -webkit-fill-color: #FFFFFF;
+		   text-shadow: 1px 0px 20px white;
+		   -webkit-transition: width 0.3s; /*Safari & Chrome*/
+		   transition: width 0.3s;
+		   -moz-transition: width 0.3s; /* Firefox 4 */
+		   -o-transition: width 0.3s; /* Opera */
+		}
+		
+		
+		li#get-passes-link, li#how-to-ride-link,li#routes-and-schedules-link  {
+			
+			font-size: 1em;
+			
+		
+		}
+		
+		/*@media only screen and (min-width: 1220px) {
+			li#get-passes-link, li#how-to-ride-link  {
+			
+				font-size: 1.2em;
+				padding-right: 5%;
+				padding-left: 5%;
+		
+			}
+		}*/
+		
+		li#get-passes-link {
+
+			i {
+				background-size: 350px 350px;
+				background-image: url(../images/art-sprites.png);
+				background-position: -1.5px -154px;
+				width: 35px;
+				height: 37px;
+				
+			}
+			a:link, a:active, a:visited, a:hover {
+				color: #ffd879;
+			}
+		
+		}
+		li#get-passes-link:hover {
+			i {	
+				//background-position: -262px -34px;
+	
+			}
+		}
+		
+		li#how-to-ride-link {
+			i {
+				background-size: 350px 350px;
+				background-image: url(../images/art-sprites.png);
+				background-position: -41.5px -154px;
+				width: 35px;
+				height: 35px;
+			
+				
+			}
+			a:link, a:active, a:visited, a:hover {
+				color: white;
+			}
+		
+		}
+		li#how-to-ride-link:hover {
+			i {
+				
+			//	background-position: -293px -34px;
+			
+			}
+		}
+		
+		}
+	}
+
+	
+	#phone-number {
+		//float: right;
+		line-height: 25px;
+		font-size: 20px;
+		//margin-right: 20px;
+		position: fixed; 
+		top: 0;
+		right: 0;
+		a:link, a:active, a:visited{
+			color: white;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		} 
+	
+}
+
+
+
+
+
+}

@@ -1,0 +1,7 @@
+.mobile body {
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5); }
+.mobile #menu-footer li {
+  display: inline-block;
+  width: 100%;
+  background: green; }
