@@ -1295,10 +1295,50 @@ function csv_site_update() {
 
 }
 
+
+function gtfs_site_update() {
+
+	echo '<h2>GTFS update - uses the GTFS api to sync site to live data</h2>';
+	
+	echo "<h3>If you want to update the site, you need to add &update=true to the end of the url.  <br/><strong>DO NOT DO THIS IF YOU ARE UNSURE YOU?RE DOING THE RIGHT THING!!</strong></h3>";
+	
+	if($_GET["update"] == "true") {
+		
+		echo '<br /><br />updating';
+		
+		echo getcwd();
+		
+		echo 'br/>';
+		
+		include 'library/php/simple_html_dom.php';
+		
+		
+		$clever_deviced_json = file_get_contents('http://96.10.227.28/art/packet/json/shelter');
+		$json = json_decode($clever_deviced_json );
+		
+		
+		foreach($json->ShelterArray as &$shelter) {
+			echo '<br /><br /><br />';
+			$web_label_html = str_get_html($shelter->Shelter->WebLabel);
+			echo $web_label_html->find('.labelShelterArrivalRowOdd')[0];
+			//echo $shelter->Shelter->WebLabel;
+			//echo trim(preg_replace('/<[^>]*>/', '****',$shelter->Shelter->WebLabel));
+		}
+		echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@';
+			//print_r($json);
+	
+	}
+	
+
+}
+
 add_action( 'admin_menu', 'add_data_import_menu' );
 function add_data_import_menu() {
 	add_management_page( 'CSV Site Update', 'CSV Site Update', 'manage_options', 'csv-site-update', 'csv_site_update' );
+	add_management_page( 'GTFS Site Update', 'GTFS Site Update', 'manage_options', 'gtfs-site-update', 'gtfs_site_update' );
 }
+
+
 
 function slugify($text)
 {

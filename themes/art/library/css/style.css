@@ -2026,9 +2026,6 @@ view.
   .mobile-all body {
     background-size: 40px 40px;
     background-repeat: repeat; }
-  .mobile-all #menu-footer li {
-    display: inline-block;
-    width: 100%; }
   .mobile-all .mobile-drawer-header {
     background: #418eae;
     border-left: 13px solid #71cde5;
@@ -2083,6 +2080,10 @@ view.
       margin-right: 8px;
       margin-top: 4px;
       margin-left: 3px; }
+  .mobile-all #menu-footer {
+    float: none; }
+    .mobile-all #menu-footer li {
+      float: none; }
 
 #menu-footer {
   float: left; }

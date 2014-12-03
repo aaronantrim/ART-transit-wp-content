@@ -27,8 +27,7 @@
 
 	#menu-footer {
 		li {
-			display: inline-block;
-			width: 100%;
+
 		}
 	}
 	
@@ -76,6 +75,8 @@
 		
 	
 	
+	
+	
 	#no-alerts-text {
 		color: white;
 		text-align: center;
@@ -115,5 +116,15 @@
 	#route-quick-select {
 	
 	}
+	
+	#menu-footer {
+		float: none;
+		li {
+			float: none;
+		}
+	
+		
+	}
+	
 
 }
