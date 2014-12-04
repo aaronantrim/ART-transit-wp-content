@@ -1825,20 +1825,28 @@ view.
       #top-blue-link-banner #desktop-main-links ul li:hover ul {
         position: absolute;
         top: 55px;
-        width: 250px;
+        width: 600px;
         border-right: 1px solid #2a9cce;
         border-left: 1px solid #2a9cce;
         border-bottom: 1px solid #2a9cce;
         right: -1px;
         background-color: #00629f;
-        -webkit-box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51);
-        -moz-box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51);
-        box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51); }
+        -webkit-box-shadow: 0px 23px 23px 0px rgba(50, 50, 50, 0.51);
+        -moz-box-shadow: 0px 23px 23px 0px rgba(50, 50, 50, 0.51);
+        box-shadow: 0px 23px 23px 0px rgba(50, 50, 50, 0.51); }
+        #top-blue-link-banner #desktop-main-links ul li:hover ul li#routes-overview-dropdown-link {
+          width: 100%;
+          text-align: center; }
+        #top-blue-link-banner #desktop-main-links ul li:hover ul li.dropdown-left-col {
+          float: left; }
+        #top-blue-link-banner #desktop-main-links ul li:hover ul li.dropdown-right-col {
+          float: right;
+          clear: right; }
         #top-blue-link-banner #desktop-main-links ul li:hover ul li {
-          width: 100%;
-          padding: 10px; }
+          padding: 10px;
+          text-transform: uppercase;
+          line-height: 32px; }
         #top-blue-link-banner #desktop-main-links ul li:hover ul li:hover {
-          width: 100%;
           padding: 10px;
           background-color: #0071b8; }
     #top-blue-link-banner #desktop-main-links ul li#get-passes-link, #top-blue-link-banner #desktop-main-links ul li#how-to-ride-link, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link {
@@ -1886,6 +1894,12 @@ view.
   #top-blue-link-banner #transit-name {
     margin-left: 254px;
     padding-right: 2.7%; } }
+.dropdown-left-col {
+  float: left; }
+
+.dropdown-right-col {
+  float: right; }
+
 .mobile-all .header {
   font-size: 12px; }
 .mobile-all #logo {
@@ -2050,6 +2064,16 @@ view.
     font-size: .9em; }
   .mobile-all .mobile-drawer {
     color: white; }
+    .mobile-all .mobile-drawer a:link {
+      color: white;
+      padding: 10px;
+      text-decoration: none; }
+    .mobile-all .mobile-drawer a:hover {
+      color: white;
+      padding: 10px;
+      text-decoration: underline; }
+    .mobile-all .mobile-drawer a:link:before {
+      content: "- "; }
   .mobile-all .mobile-drawer-header.open i {
     background-position: -92.5px -158.5px;
     top: 0px; }
@@ -2703,6 +2727,10 @@ body {
   top: 10px;
   right: 20px;
   width: 65%; }
+
+.route-icon {
+  float: left;
+  margin-right: 4px; }
 
 #kern-phone {
   float: right;

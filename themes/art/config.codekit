@@ -1216,6 +1216,15 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/library\/php\/simple_html_dom.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/php\/simple_html_dom.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/library\/route-icons.css": {
 		"fileType": 16,
 		"ignore": 0,

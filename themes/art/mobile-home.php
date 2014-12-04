@@ -8,11 +8,58 @@ at [stop name]:</h2>
 		</div><!-- end #mobile-map-link -->
 		<div id="route-quick-select" class="mobile-padded" >
 			<select>
-				<option>Select a bus route</option>
-				<option>Route 1</option>
-				<option>Route 2</option>
-				<option>Route 3</option>
-				<option>Route 4</option>
+			<option>Select a bus route</option>
+			<?php
+			$query = new WP_Query(array(
+											'posts_per_page' => -1,
+											"post_type"=>"route_line",
+											'orderby' => 'meta_value', 
+											"order" => "ASC"
+								
+
+											));
+
+						
+												
+												if ( $query->have_posts() ) {
+													?>
+													<ul>
+													
+													<?php
+														$route_line_count = 0;
+														while ( $query->have_posts() ) {
+															$query->the_post();
+											
+															?>
+																<option>
+																	
+																	<?php 
+																	$routes = explode(',',get_field('route_line_routes'));
+																	 echo 'Route';
+																	  if(sizeof($routes)>1) echo 's';
+																	  echo ' ';
+																	foreach($routes as &$route) {
+																	
+																		echo $route;
+																	?>
+																	
+																		
+																																
+																	<?php } 
+																	
+																	echo ' : ';
+																	the_title(); ?>
+																</option>
+														<?php
+															$route_line_count ++;
+														}
+														?>
+														</ul>
+														<?php
+													}  
+											wp_reset_postdata();
+						?>
+			
 			</select>
 		</div><!-- end #route-quick-select -->
 		<?php if(get_alertCount() > 0) { ?>
@@ -140,4 +187,41 @@ at [stop name]:</h2>
 		
 		<h1 id="mobile-alerts-drawer" class="mobile-drawer-header"><i></i>News</h1>
 		<div class="mobile-drawer" style="display: none;">
+		<?php
+							
+								
+							$query = new WP_Query(array(
+							'posts_per_page' => 3,
+							"post_type"=>"news", 
+								
+
+							));
+
+						
+						
+								if ( $query->have_posts() ) {
+									?>
+									<ul>
+									<?php
+									
+										while ( $query->have_posts() ) {
+											$query->the_post();
+											
+											?>
+												<li>
+													 <a href="<?php the_permalink(); ?>" >
+
+														 <i></i> <?php the_title(); ?>
+										 
+													 </a>
+												</li>	
+											
+										<?php
+										}
+										?>
+										</ul>
+										<?php
+									}  
+							wp_reset_postdata();
+							?>
 		</div>

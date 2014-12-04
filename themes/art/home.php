@@ -158,6 +158,7 @@ var map = L.mapbox.map('interactive-map-holder', 'trilliumtransit.e8e8e512', { z
 								<li><a href="<?php echo get_permalink(11 ); ?>" ><i id="passenger-conduct-icon"></i>Policies</a></li>
 							<!--	<li><a href="<?php echo get_permalink( 13 ); ?>" ><i id="mobile-and-desktop-apps-icon"></i>Mobile and Desktop Apps</a></li>-->
 								<li><a href="<?php echo get_permalink( 15); ?>" ><i id="holidays-icon"></i>Holidays</a></li>
+								<li><a href="<?php echo get_permalink( 15); ?>" ><i id="holidays-icon"></i>Hotel Specific Pages</a></li>
 								</ul>
 								
 								

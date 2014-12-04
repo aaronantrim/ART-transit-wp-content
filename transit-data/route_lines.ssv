@@ -1,0 +1,14 @@
+route line id\line name\street description\routes\color\frequency
+1\Harbor Blvd. Line\via Harvor Blvd.\1,2\e12219\20
+2\Grand Plaza Line\via Harbor Blvd. & Convention Way\3,4,5\3ead29\20
+3\HOTEL CIRCLE CLEMENTINE LINE\via Clementine St.\6,7,8\ff8200\20
+4\KATELLA AVE. LINE\via Katella Ave.\9\007fba\20
+5\DOWNTOWN PACKING DISTRICT LINE\via Anaheim Blvd.\10\0046b9\30
+6\BALL ROAD LINE\via Ball Rd.\11\9e25b4\20
+7\MANCHESTER AVE. LINE\via Disney Way\12\e03dae\20
+8\ARTIC SPORTSTOWN LINE\\14,15\89898c\30
+9\ORANGE LINE\via Chapman Ave.\16\f577c3\Approx. every 60 minutes from start of service until 11 AM and from 6 PM until close of service
+10\CANYON LINE\via East La Palma Ave.\17\ddc305\See schedule
+11\BUENA PARK LINE\via West La Palma Ave.\18\33d8c2\See schedule
+12\Mainplace Line\via I-5 Freeway & Main St.\19\420097\See schedule
+13\TOY STORY LINE\via Disney Way\20\00a09a\60

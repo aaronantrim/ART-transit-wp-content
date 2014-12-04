@@ -19,27 +19,63 @@
 										<i></i>
 										<a href="#">Routes &amp; Schedules</a>
 										<ul>
-											<li>
+										
+										
+										<li id="routes-overview-dropdown-link">
 												Routes Overview
 											</li>
-											<li>
-												Route 1
-											</li>
-											<li>
-												Route 2
-											</li>
-											<li>
-												Route 3
-											</li>
-											<li>
-												Route 1
-											</li>
-											<li>
-												Route 2
-											</li>
-											<li>
-												Route 3
-											</li>
+											
+										<?php
+										$query = new WP_Query(array(
+											'posts_per_page' => -1,
+											"post_type"=>"route_line",
+											'orderby' => 'meta_value', 
+											"order" => "ASC"
+								
+
+											));
+
+						
+												
+												if ( $query->have_posts() ) {
+													?>
+													<ul>
+													
+													<?php
+														$route_line_count = 0;
+														while ( $query->have_posts() ) {
+															$query->the_post();
+											
+															?>
+																<li class="<?php if ($route_line_count < 8) { echo 'dropdown-left-col';} else { echo 'dropdown-right-col'; } ?>" >
+																	
+																	<?php 
+																	$routes = explode(',',get_field('route_line_routes'));
+																	foreach($routes as &$route) {
+																	?>
+																	
+																	<i id="icon-sml-<?php echo $route ?>" class="route-icon route-icon-sml" > </i>
+																	
+																	<?php } 
+																	
+																	
+																	the_title(); ?>
+																</li>
+														<?php
+															$route_line_count ++;
+														}
+														?>
+														</ul>
+														<?php
+													}  
+											wp_reset_postdata();
+											?>
+										
+										
+										
+										
+										
+											
 										</ul>
 									</li>
 								</ul>
