@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 
-			<?php get_template_part( 'generic-page-top'); ?> 
 			
+			<div class="mobile" style="display: none">
+			 	<?php get_template_part( 'mobile-page' ); ?>
+			</div>
+
+			<div id="content">
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
@@ -77,9 +81,9 @@
 						<?php get_template_part( 'generic-sidebar'); ?> 
 				</div>
 				</div><!-- end #content -->
-				<div 
+				
 
-		<?php get_template_part( 'generic-page-bottom'); ?> 
+		
 			
 
 <?php get_footer(); ?>

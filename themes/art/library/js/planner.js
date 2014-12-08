@@ -26,6 +26,21 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().siblings().find('.selected').removeClass('selected');
 	});
 	
+	
+	$('.planner .next-button').click(function() {
+		
+		$panelNumber = $(this).parent().attr('rel');
+		$(this).parent().find('.panel-tab.');
+		
+	});
+	
+	$('.planner .back-button').click(function() {
+		
+		$panelNumber = $(this).parent().attr('rel');
+		$(this).parent().find('.panel-tab.');
+		
+	});
+	
 
 
 

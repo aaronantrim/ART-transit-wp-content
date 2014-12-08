@@ -33,7 +33,7 @@ $(document).ready(function(){
 	});
 
 	$('#desktop-main-links li').click(function() {
-		window.location.href = $(this).find('a').attr('href'); 
+		//window.location.href = $(this).find('a').attr('href'); 
 	});
 
 

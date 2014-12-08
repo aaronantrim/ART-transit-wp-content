@@ -1878,6 +1878,19 @@ view.
       color: white; }
     #top-blue-link-banner #desktop-main-links ul li#how-to-ride-link:hover i {
       background-position: -293px -34px; }
+    #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link i.menu {
+      float: left;
+      background-image: url(../images/art-sprites.png);
+      background-position: -468px -13px;
+      width: 30px;
+      height: 20px;
+      margin-right: 6px;
+      position: relative;
+      top: 18px; }
+    #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:link, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:active, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:visited, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:hover {
+      color: white; }
+    #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link:hover i.menu {
+      background-position: -468px -35px; }
   #top-blue-link-banner #phone-number {
     line-height: 25px;
     font-size: 20px;
@@ -2108,6 +2121,10 @@ view.
     float: none; }
     .mobile-all #menu-footer li {
       float: none; }
+  .mobile-all #mobile-content {
+    background: white; }
+    .mobile-all #mobile-content img {
+      max-width: 100%; }
 
 #menu-footer {
   float: left; }
@@ -2151,6 +2168,9 @@ img#map-gradient-overlay {
 
 .cf:after, .comment-respond:after {
   content: none; }
+
+.home .footer-nav li {
+  float: left; }
 
 #planner-wrapper {
   z-index: 200;
@@ -2339,9 +2359,6 @@ img#map-gradient-overlay {
   margin-left: 10px; }
 
 .route-icon-large {
-  background-image: url(../images/art-sprites.png);
-  width: 80px;
-  height: 80px;
   float: left; }
 
 .route-icon-large.item-num-2 {
@@ -2792,12 +2809,12 @@ body {
   left: 0;
   top: -30px; }
 
-@media only screen and (min-width: 1380px) {
+@media only screen and (min-width: 1480px) {
   #logo {
     height: 210px;
     background-position: 0 0px;
     left: -40px; } }
-@media only screen and (min-width: 1630px) {
+@media only screen and (min-width: 1610px) {
   #logo {
     height: 210px;
     background-position: 0 0px;

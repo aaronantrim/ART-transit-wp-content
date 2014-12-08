@@ -8,6 +8,8 @@
  */
  
  
+
+ 
  function trillium_gtfs_update_install () {
    global $wpdb;
 
@@ -44,6 +46,25 @@ function trillium_gtfs_update_create_menu() {
 
 
 
+
+function create_new_nav_menu($menu_name) {
+		
+	// Check if the menu exists
+	$menu_exists = wp_get_nav_menu_object( $menu_name );
+
+	// If it doesn't exist, let's create it.
+	$menu_id = -1;
+	if( !$menu_exists){
+		$menu_id = wp_create_nav_menu($menu_name);
+		
+	} else {
+	
+		wp_delete_nav_menu($menu_name);
+		$menu_id = wp_create_nav_menu($menu_name);
+	}
+	return $menu_id;
+		
+}
 
 
 
@@ -99,9 +120,23 @@ function trillium_gtfs_update_settings_page() {
 			
 		}
 		
+		$existing_route = get_posts(array(
+			'numberposts' => -1,
+			'post_type' => 'route',
+		));
+		
+		foreach($existing_route as &$route) {
+			echo "route reset.<br />";
+			wp_delete_post( $route->ID, true );
+			
+		}
+		
 	
 		
-		$handle = fopen(get_site_url()."/wp-content/transit-data/route_lines.ssv", "r"); 
+		$handle = fopen(get_site_url()."/wp-content/transit-data/gtfs/anaheim-ca-us/routes.txt", "r");
+	
+		$route_lines = array();
+	
 	
 		if ($handle) {
 			echo 'sdf';
@@ -111,32 +146,146 @@ function trillium_gtfs_update_settings_page() {
 				if($lineCount > 0) {
 			
 					//echo $line;
-					echo "<br/>.";
+					echo "<br/>.".$line;
 			
-					$splitLine = explode("\\", $line);
-					$route_line_id = $splitLine[0];
-					$line_name = $splitLine[1];
-					$street_description = $splitLine[2];
-					$routes = $splitLine[3];
-					$color = $splitLine[4];
-					$frequency = $splitLine[5];	
+					$splitLine        =   explode(",", $line);
+					$agency_id        = $splitLine[0];
+					$route_id        = $splitLine[1];
+					$route_short_name    = $splitLine[2];
+					$route_long_name       = $splitLine[3];
+					$route_desc    			= $splitLine[4];
+					$route_type 		= $splitLine[5];
+					$route_url		 	= $splitLine[6];
+					$route_color 		= $splitLine[7];
+					$route_text_color 	= $splitLine[8];
 					
+					// make or update route_line array
+					if(!array_key_exists($route_long_name, $route_lines)) {
+						$route_lines[$route_long_name] = array();
+					} 
+						
+					$route_lines[$route_long_name][] = str_replace("\"","",$route_short_name);
+		
 					
 					$my_post = array(
-					  'post_title'    => $line_name,
-					  'post_name' => $line_name,
+					  'post_title'    => str_replace("\"","",$route_short_name).' : '.$route_long_name,
+					  'post_name' => slugify($route_short_name),
 					  'post_status'   => 'publish',
-					  'post_type'      => 'route_line',
+					  'post_type'      => 'route',
 					  'post_author'   => 1
 						);
 	
 						// Insert the post into the database
 						$post_to_update_id = wp_insert_post( $my_post );
-						update_field('field_547f89dd6be2a', $route_line_id, $post_to_update_id);
-						update_field('field_547f8a016be2c', $street_description, $post_to_update_id );
-						update_field('field_547f8a196be2d', $routes, $post_to_update_id );
-						update_field('field_547f8a1e6be2e', $color, $post_to_update_id );
-						update_field('field_547f8a5a6be2f', $frequency, $post_to_update_id );
+						
+						 
+						update_field('field_5484fb3b6cdeb', $route_id        	, $post_to_update_id); 
+						update_field('field_5484fb446cdec', intval(str_replace("\"","",$route_short_name)), $post_to_update_id); 
+						update_field('field_5484fb4a6cded',str_replace("\"","", $route_long_name) 	, $post_to_update_id); 
+						update_field('field_5484fb516cdee', $route_desc    	, $post_to_update_id); 
+						update_field('field_5484fb576cdef', $route_text_color		 , $post_to_update_id); 
+						update_field('field_5484fb2c6cdea', $route_color 			, $post_to_update_id); 
+				}
+				$lineCount ++;
+			}
+			
+			while ($route_line = current($route_lines)) {
+			 			
+				
+				$my_post = array(
+					  'post_title'    => str_replace("\"","",key($route_lines)),
+					  'post_name' => slugify(key($route_lines)),
+					  'post_status'   => 'publish',
+					  'post_type'      => 'route_line',
+					  'post_author'   => 1
+				);
+				
+				$post_to_update_id = wp_insert_post( $my_post );
+				
+				$numberString = "";
+				$numCount = 0;
+				foreach($route_line as $route_number) {
+					
+					$numberString.= $route_number;
+					if($numCount < sizeof($route_line)-1) $numberString.=',';
+					
+					$numCount ++;
+				}
+				
+				update_field('field_547f8a196be2d', $numberString, $post_to_update_id);
+				
+				
+						
+				
+				next($route_lines);
+			}
+			
+			};
+			
+			
+		
+		
+		
+		// delete menus
+		
+		
+		
+		$attractions_menu_id = create_new_nav_menu('attractions_planner_menu');
+		echo 'attractions menu id: '.$attractions_menu_id;
+		
+		$hotel_menu_id =create_new_nav_menu('hotel_planner_menu');
+		echo 'hotel menu id: '.$hotel_menu_id;
+		
+		$restaurant_menu_id =create_new_nav_menu('restaurant_planner_menu');
+		echo 'restaurant menu id: '.$restaurant_menu_id;
+		
+		
+		
+		$handle = fopen(get_site_url()."/wp-content/transit-data/gtfs/anaheim-ca-us/landmarks.txt", "r"); 
+	
+		if ($handle) {
+			
+			$lineCount = 0;
+			 while (($line = fgets($handle)) !== false) {
+			
+				if($lineCount > 0) {
+				
+					echo '.<br />';
+				
+					$splitLine = explode(",", $line);
+					$landmark_id = $splitLine[0];
+					$landmark_name = $splitLine[1];
+					$category_name = $splitLine[2];
+					$landmark_url = $splitLine[3];
+					$icon_id = $splitLine[4];
+					$lat = $splitLine[5];
+					$lon = $splitLine[6];
+					
+					$menu_id = -1;
+					
+					switch ($category_name) {
+						case 'Attractions':
+							$menu_id = $attractions_menu_id;
+							echo $category_name.': ';
+							break;
+						case 'Hotels':
+							$menu_id = $hotel_menu_id;
+							echo $category_name.': ';
+							break;
+						case 'Restaurants':
+							$menu_id = $restaurant_menu_id;
+							echo $category_name.': ';
+							break;
+					}
+					echo $landmark_name;
+					
+				
+					wp_update_nav_menu_item($menu_id, 0, array(
+						'menu-item-title' =>  __($landmark_name),
+						'menu-item-classes' => 'landmark-'.$category_name,
+						'menu-item-url' => home_url( '#' ), 
+						'menu-item-status' => 'publish'));
+
 				}
 				$lineCount ++;
 			}

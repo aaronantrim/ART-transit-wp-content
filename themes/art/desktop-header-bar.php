@@ -4,20 +4,20 @@
 				
 						<div id="top-blue-link-banner">
 							<div id="logo"><a href="<?php echo get_site_url(); ?>"></a></div>
-							<div id="transit-name" class="blue-border">Anaheim Resort Transit</div>
+							<div id="transit-name" class="blue-border linked-div" rel="<?php echo get_site_url(); ?>" >Anaheim Resort Transit</div>
 							<div id="desktop-main-links">
 								<ul>
 									<li id="get-passes-link" class="blue-border">  
 										<i></i>
-										<a href="#">Get Passes</a>
+										<a href="<?php echo get_site_url();?>/get-passes">Get Passes</a>
 									</li>
 									<li id="how-to-ride-link" class="blue-border">
 										<i></i>
-										<a href="#">How to Ride</a>
+										<a href="<?php echo get_site_url();?>/how-to-ride">How to Ride</a>
 									</li>
 									<li id="routes-and-schedules-link" class="blue-border">
-										<i></i>
-										<a href="#">Routes &amp; Schedules</a>
+									
+										<a href="<?php echo get_site_url();?>/routes-and-schedules"><i class="menu"></i>Routes &amp; Schedules</a>
 										<ul>
 										
 										
@@ -47,7 +47,7 @@
 															$query->the_post();
 											
 															?>
-																<li class="<?php if ($route_line_count < 8) { echo 'dropdown-left-col';} else { echo 'dropdown-right-col'; } ?>" >
+																<li rel="<?php echo get_the_permalink();?>" class="linked-div <?php if ($route_line_count < 8) { echo 'dropdown-left-col';} else { echo 'dropdown-right-col'; } ?>" >
 																	
 																	<?php 
 																	$routes = explode(',',get_field('route_line_routes'));
@@ -80,7 +80,7 @@
 									</li>
 								</ul>
 							</div><!-- end #desktop-main-links -->
-							<div id="phone-number"><a href="tel:7145635287">(714) 563-5287</a></div>
+							<div id="phone-number"><a href="tel:7145635287">Info: (714) 563-5287</a></div>
 						</div><!-- end top-blue-link-banner -->
 					</div>
 		</header>

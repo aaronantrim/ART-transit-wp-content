@@ -459,7 +459,7 @@ function codex_route_init() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'routes-and-schedules' ),
+		'rewrite'            => array( 'slug' => 'routes' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -494,6 +494,7 @@ function codex_route_init() {
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
+		'rewrite'            => array( 'slug' => 'routes-and-schedules' ),
 		'query_var'          => true,
 		'capability_type'    => 'post',
 		'has_archive'        => false,
@@ -900,7 +901,7 @@ function my_edit_route_columns( $columns ) {
 		'cb' => '<input type="checkbox" />',
 		'route_number' => __( 'Route Number' ),
 		'title' => __( 'Route Name' ),
-		'schedules' => __( 'Route timetables' ),
+		//'schedules' => __( 'Route timetables' ),
 		
 	);
 
@@ -918,7 +919,7 @@ function my_manage_route_columns( $column, $post_id ) {
 		case 'route_number' :
 
 			/* Get the post meta. */
-			$route_number = get_field( 'route_number', $post_id );
+			$route_number = get_field( 'route_short_name', $post_id );
 			
 			
 			/* If no duration is found, output a default message. */
@@ -927,7 +928,7 @@ function my_manage_route_columns( $column, $post_id ) {
 
 			/* If there is a duration, append 'minutes' to the text string. */
 			else
-				echo  __('<i id="icon-sml-'.get_field( 'shared_class', $post_id ).'" class="route-icon" style="float: left; margin-right: 10px"></i> ' .  (string)$route_number) ;
+				echo  __('<i id="icon-sml-'.get_field( 'route_short_name', $post_id ).'" class="route-icon" style="float: left; margin-right: 10px"></i> ' .  (string)$route_number) ;
 				
 
 			break;
@@ -998,8 +999,8 @@ function my_sort_route( $vars ) {
 			$vars = array_merge(
 				$vars,
 				array(
-					'meta_key' => 'route_number',
-					'orderby' => 'meta_value'
+					'meta_key' => 'route_short_name',
+					'orderby' => 'meta_value_num'
 				)
 			);
 		}
@@ -1011,7 +1012,7 @@ function my_sort_route( $vars ) {
 
 
 function my_admin_enqueue_css() {
-	echo '<link rel="stylesheet" id="route_icons-css"  href="http://kerntransit.trilliumtransit.com/wp-content/themes/kern/library/css/route-icons.css" type="text/css" media="all" />';
+	echo '<link rel="stylesheet" id="route_icons-css"  href="'.get_template_directory_uri().'/library/css/route-icons.css" type="text/css" media="all" />';
 }
 
 add_action( 'admin_enqueue_scripts', 'my_admin_enqueue_css' );

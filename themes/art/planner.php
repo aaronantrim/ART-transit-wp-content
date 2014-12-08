@@ -12,120 +12,239 @@
 						<div class="more">More</div>
 						<i class="lower-arrow"></i>
 					</div><!-- end #next-button -->
-					<div class="place-col-1">
-						<ul>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
+					<div class="panel-tab panel-tab-0"> 
+						<div class="place-col-1">
+							<ul>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
 						
-						</ul>
-					</div><!-- end #place-col-1 -->
-					<div class="place-col-2">
-						<ul>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
-							<li>
-								 Attraction
-							</li>
+							</ul>
+						</div><!-- end #place-col-1 -->
+						<div class="place-col-2">
+							<ul>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
 						
-						</ul>
-					</div><!-- end #place-col-2 -->
+							</ul>
+						</div><!-- end #place-col-2 -->
+					</div><!-- end .panel-tab -->
+					<div class="panel-tab panel-tab-1">
+						<div class="place-col-1">
+							<ul>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+						
+							</ul>
+						</div><!-- end #place-col-1 -->
+						<div class="place-col-2">
+							<ul>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+						
+							</ul>
+						</div><!-- end #place-col-2 -->
+					</div><!-- end .panel-tab -->
 				</div><!-- end place-pannel -->
 			</li>
 			<li class="active"> 
 				<div class="tab-holder"><a href="javascript:void(0)">Hotels</a></div>
-				<div class="place-pannel">
+				<div class="place-pannel" rel="0">
 				<div class="next-button"> 
 						<i class="upper-arrow"></i>
 						<div class="more">More</div>
 						<i class="lower-arrow"></i>
 					</div><!-- end #next-button -->
-					<div class="place-col-1">
-						<ul>
-							<li>
-								 Paradise Pier
-							</li>
-							<li>
-								Grand Californian
-							</li>
-							<li>
-								Anaheim Marriot
-							</li>
-							<li>
-								 Howard Johnson
-							</li>
-							<li>
-								Park Vue Inn
-							</li>
-							<li>
-								 Anaheim Marriot	
-							</li>
-							<li>
-								 Paradise Pier
-							</li>
+					<div class="panel-tab panel-tab-0 showing"> 
+					
+					
+					<?php $args = array(
+        'order'                  => 'ASC',
+        'orderby'                => 'menu_order',
+        'post_type'              => 'nav_menu_item',
+        'post_status'            => 'publish',
+        'output'                 => ARRAY_A,
+        'output_key'             => 'menu_order',
+        'nopaging'               => true,
+        'update_post_term_cache' => false ); 
+        
+         $hotel_items = wp_get_nav_menu_items( 'hotel_planner_menu', $args ); 
+         
+        
+	
+	?>
+					
+						<div class="place-col-1">
+							<ul>
+							<?php
+								 foreach ( (array) $hotel_items as $key => $menu_item ) {
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$menu_list .= '<li>'.$title . '</li>';
+			
+		}
+		echo $menu_list;
+		
+		?>
 						
-						</ul>
-					</div><!-- end #place-col-1 -->
-					<div class="place-col-2">
-						<ul>
-							<li>
-								 Hotel Menage
-							</li>
-							<li>
-								Best Western Stoval’s inn
-							</li>
-							<li>
-								 Ramada Maingate
-							</li>
-							<li>
-								 Qualitty Inn & Suites
-							</li>
-							<li>
-								 DoubleTree Suites
-							</li>
-							<li>
-								 Ramada Maingate
-							</li>
-							<li>
-								 Hotel Menage
-							</li>
+							</ul>
+						</div><!-- end #place-col-1 -->
+						<div class="place-col-2">
+							<ul>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
 						
-						</ul>
-					</div><!-- end #place-col-2 -->
+							</ul>
+						</div><!-- end #place-col-2 -->
+					</div><!-- end .panel-tab -->
+					<div class="panel-tab panel-tab-1" style="display: none;">
+						<div class="place-col-1">
+							<ul>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+						
+							</ul>
+						</div><!-- end #place-col-1 -->
+						<div class="place-col-2">
+							<ul>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction2
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+								<li>
+									 Attraction
+								</li>
+						
+							</ul>
+						</div><!-- end #place-col-2 -->
+					</div><!-- end .panel-tab -->
 				</div><!-- end place-pannel -->
 			</li>
 			<li>

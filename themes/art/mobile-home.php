@@ -7,7 +7,7 @@ at [stop name]:</h2>
 			Open a full-screen interactive map
 		</div><!-- end #mobile-map-link -->
 		<div id="route-quick-select" class="mobile-padded" >
-			<select>
+			<select onchange="location = this.options[this.selectedIndex].value;">
 			<option>Select a bus route</option>
 			<?php
 			$query = new WP_Query(array(
@@ -31,13 +31,14 @@ at [stop name]:</h2>
 															$query->the_post();
 											
 															?>
-																<option>
+																<option value="routes-and-schedules/<?php echo $post->post_name ;?>">
 																	
 																	<?php 
 																	$routes = explode(',',get_field('route_line_routes'));
 																	 echo 'Route';
 																	  if(sizeof($routes)>1) echo 's';
 																	  echo ' ';
+																	  $route_count = 0;
 																	foreach($routes as &$route) {
 																	
 																		echo $route;
@@ -45,7 +46,10 @@ at [stop name]:</h2>
 																	
 																		
 																																
-																	<?php } 
+																	<?php 
+																		if($route_count < sizeof($routes)-1) echo ', ';
+																		$route_count ++;
+																	} 
 																	
 																	echo ' : ';
 																	the_title(); ?>

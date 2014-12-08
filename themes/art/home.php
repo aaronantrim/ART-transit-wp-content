@@ -56,7 +56,7 @@ var map = L.mapbox.map('interactive-map-holder', 'trilliumtransit.e8e8e512', { z
 										
 												if( has_post_thumbnail()) { ?>
 								
-											<img class="slide-image large" src="
+											<img class="slide-image large linked-div" rel="<?php echo get_permalink(); ?>" src="
 											<?php
 										
 												$thumb_id = get_post_thumbnail_id();
@@ -182,6 +182,7 @@ var map = L.mapbox.map('interactive-map-holder', 'trilliumtransit.e8e8e512', { z
 							<div id="second-home-row">
 								<div id="home-lower-promo-image">
 										<img  src="<?php echo get_template_directory_uri(); ?>/library/images/lower-promo-image.jpg" />
+										
 								</div><!-- end #home-lower-promo-image -->
 								<div id="home-description-of-services">
 									<div id="home-quote">

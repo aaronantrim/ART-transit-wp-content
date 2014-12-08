@@ -1,0 +1,98 @@
+landmark_id,landmark_name,category_name,landmark_url,icon_id,lat,lon
+1, America's Best Value Inn,Hotels,,,33.803533,-117.913191
+2, Anaheim Brewery,Restaurants,,,33.832474,-117.91274
+3, Anaheim Convention Center,Attractions,,,33.799796,-117.920064
+4, Anaheim Stadium,Attractions,,,33.799298,-117.883872
+5, Bodies THE EXHIBITION,Attractions,,,33.851058,-117.99837
+6, Carrows Restaurant,Restaurants,,,33.821224,-117.915463
+7, City Hall,Attractions,,,33.834503,-117.912898
+8, Clarion Hotel,Hotels,,,33.79957,-117.916168
+9, Coffee  Bean & Tea Leaf,Restaurants,,,33.839685,-117.888818
+10, Cortona Inn & Suites,Hotels,,,33.798158,-117.915911
+11, Courtyard by Marriott,Hotels,,,33.797708,-117.916598
+12, Denny's Restaurant,Restaurants,,,33.802903,-117.927147
+13, Dolphin's Cove,Hotels,,,33.796231,-117.9135
+14, Econolodge ,Hotels,,,33.847164,-117.980096
+15, Extended Stay,Hotels,,,33.804656,-117.908755
+16, GreenWood Suites,Hotels,,,33.805027,-117.906794
+17,The Blind Rabbitt (Speak Easy),Restaurants,,,33.831405,-117.911619
+18, Hilton Anaheim,Hotels,,,33.79988,-117.918414
+19, Holiday Inn Anaheim Resort,Hotels,,,33.800514,-117.901128
+20, Homewood Suites,Hotels,,,33.788242,-117.917371
+21, Honda Center,Attractions,,,33.807331,-117.876535
+22, Hyatt House,Hotels,,,33.808213,-118.029842
+23, Hyatt Place,Hotels,,,33.79836,-117.9163
+24, L3 Interstate Electronics,Attractions,,,33.82436,-117.903405
+25, Morton's The Steakhouse,Restaurants,,,33.800135,-117.915834
+26, National Grove of Anaheim,Attractions,,,33.803105,-117.886238
+27, Pirates Dinner Adventure,Restaurants,,,33.853479,-117.997618
+28, Ramada Maingate North,Hotels,,,33.820963,-117.915477
+29, Anaheim Residence Inn Maingate,Hotels,,,33.806108,-117.909248
+30, Sheraton Park,Hotels,,,33.800766,-117.915625
+31, Sprinhgill Suites,Hotels,,,33.802964,-117.915979
+32, Target,Attractions,,,33.831188,-117.942574
+33, The White House,Attractions,,,33.823601,-117.910368
+34, Tiffy's Restaurant,Restaurants,,,33.802891,-117.923692
+35, TITANIC The Artifact Exhibition,Attractions,,,33.851058,-117.99837
+36, Unami Burger,Restaurants,,,33.832636,-117.912765
+37, US Postal Office,Attractions,,,33.832758,-117.916576
+38, WSS Shoe store,Attractions,,,33.831654,-117.941111
+39,America's Best Value Inn (W) Ball Rd.,Hotels,,,33.817867,-117.913775
+40,Anabella Hotel,Hotels,,,33.802315,-117.921958
+41,Anaheim GardenWalk Dining & Entertainment District ,,,,33.806436,-117.911792
+42,Anaheim Grayline Tour Center ,Attractions,,,33.798895,-117.899139
+43,Anaheim Islander Inn & Suites,Hotels,,,33.80307,-117.91305
+44,Anaheim Plaza Shopping Center,Attractions,,,33.837906,-117.938505
+45,Anaheim Regional Intermodal Transportation Center,,,,33.817867,33.817867
+46,Anaheim Resort RV Park,Hotels,,,33.812487,-117.90742
+47,Anahiem Police Department,Attractions,,,33.829707,-117.919106
+48,Arena Corporate Center,Attractions,,,33.810707,-117.876405
+49,Ayres Hotel Anaheim,Hotels,,,33.805597,-117.878143
+50,Ayres Inn Orange,Hotels,,,33.789326,-117.89141
+51,Best Western Pavilions,Hotels,,,33.803067,-117.92752
+52,Best Western Raffles,Hotels,,,33.79768,-117.914811
+53,Best Western Stovall's,Hotels,,,33.803042,-117.924806
+54,Best Western Mereidian,Hotels,,,33.775904,-117.891
+55,Coco's Restaurant,Restaurants,,,33.803042,-117.924806
+56,CVS/pharmacy,Attractions,,,33.802969,-117.91554
+57,Dad Miller Golf Course,Attractions,,,33.83516,-117.967573
+58,Days Inn Anaheim ,Hotels,,,33.79269,-117.914585
+59,Desert Palm Suite ,Hotels,,,33.803552,-117.916159
+60,Disneyland Resort,Attractions,,,33.809761,-117.91897
+61,Double Tree Guest Suites,Hotels,,,33.796705,-117.915799
+62,Downtown Anaheim -- Anaheim Muzeo,Attractions,,,33.833297,-117.914037
+63,Embassy Suites,Hotels,,,33.79129,-117.91637
+64,Harbor RV Park,Hotels,,,33.820141,-117.915154
+65,Holiday Inn Express,Hotels,,,33.774791,-117.908259
+66,Holiday Inn Hotel & Suites,Hotels,,,33.816634,-117.928083
+67,Hotel Menage  ,Hotels,,,33.81747,-117.915851
+68,Howard Johnson Anaheim,Hotels,,,33.812858,-117.91412
+69,IHOP,Restaurants,,,33.809194,-117.915132
+70,Kaiser Perminente Medical Center,Attractions,,,33.853261,-117.844353
+71,Knight's Inn,Hotels,,,33.817876,-117.913404
+72,Knott's Berry Farm,Attractions,,,33.84422,-118.000193
+73,Ky'a Restaurant,Restaurants,,,33.817475,-117.915887
+74,La Quinta Inn & Suites,Hotels,,,33.804312,-117.909884
+75,Marri's Restaurant,Restaurants,,,33.80281,-117.928073
+76,Medieval Times Dinner & Tournament,Restaurants,,,33.851548,-117.99666
+77,Motel 6,Hotels,,,33.806014,117.90796
+78,Outlets at Orange ,Attractions,,,33.782408,-117.893917
+79,Peacock Suites,Hotels,,,33.804776,-117.906848
+80,Portofino Inn & Suites,Hotels,,,33.8023,-117.915648
+81,Quality Inn & Suites (Courtyard and Residence Inn 2016),Hotels,,,33.811853,-117.912379
+82,Ramada Plaza,Hotels,,,33.803561,-117.913937
+83,Red Lion Hotel,Hotels,,,33.801673,-117.9148
+84,Roscoes Chicken & Waffles ,Restaurants,,,34.098572,-118.322207
+85,Ruth Chris Steakhouse,Restaurants,,,33.797683,-117.915601
+86,Shakey's Pizza,Restaurants,,,33.819491,-117.915283
+87,Springhill Suites ,Hotels,,,33.817797,-117.926615
+88,Stanford Inn & Suites,Hotels,,,33.793846,-117.915296
+89,Staybridge Suites,Hotels,,,33.800922,-117.901206
+90,Tagerine Grill,Restaurants,,,33.803149,-117.923054
+91,Team Disney Administration Building,Attractions,,,33.817472,-117.918938
+92,The Sand Box,Restaurants,,,33.803552,-117.916157
+93,TownPlace Suties ,Hotels,,,33.804593,-117.88882
+94,Toy Story Transportation Center,Attractions,,,33.799806,-117.911892
+95,Walmart Neighborhood Market,Attractions,,,33.801296,-117.9422
+96,Westfield MainPlace Mall,Attractions,,,33.775235,-117.86914
+97,WorldMark Anaheim,Hotels,,,33.803568,-117.908994

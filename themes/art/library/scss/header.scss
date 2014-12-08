@@ -206,6 +206,31 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 			}
 		}
 		
+		
+		li#routes-and-schedules-link  {
+			i.menu {
+				float: left;
+				background-image: url(../images/art-sprites.png);
+				background-position: -468px -13px;
+				width: 30px;
+				height: 20px;
+				margin-right: 6px;
+				position: relative;
+				top: 18px;
+			}
+			a:link, a:active, a:visited, a:hover {
+				color: white;
+			}
+		
+		}
+		li#routes-and-schedules-link:hover {
+			i.menu {
+				
+				background-position: -468px -35px;
+			
+			}
+		}
+		
 		}
 	}
 
