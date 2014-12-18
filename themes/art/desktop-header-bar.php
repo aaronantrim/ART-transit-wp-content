@@ -1,15 +1,15 @@
-<header class="header desktop-only" role="banner">
+<header id="desktop-header-bar-map" class="header desktop-only" role="banner">
  
 					<div id="inner-header" class="wrap cf">
 				
 						<div id="top-blue-link-banner">
 							<div id="logo"><a href="<?php echo get_site_url(); ?>"></a></div>
-							<div id="transit-name" class="blue-border linked-div" rel="<?php echo get_site_url(); ?>" >Anaheim Resort Transit</div>
+							<div id="transit-name" class="blue-border linked-div" rel="<?php echo get_site_url(); ?>" >Anaheim Resort Transportation</div>
 							<div id="desktop-main-links">
 								<ul>
-									<li id="get-passes-link" class="blue-border">  
+									<li id="get-passes-link" class="blue-border linked-div" rel="https://anaheim-transportation-network.myshopify.com">  
 										<i></i>
-										<a href="<?php echo get_site_url();?>/get-passes">Get Passes</a>
+										<a href="https://anaheim-transportation-network.myshopify.com">Get Passes</a>
 									</li>
 									<li id="how-to-ride-link" class="blue-border">
 										<i></i>
@@ -17,20 +17,24 @@
 									</li>
 									<li id="routes-and-schedules-link" class="blue-border">
 									
-										<a href="<?php echo get_site_url();?>/routes-and-schedules"><i class="menu"></i>Routes &amp; Schedules</a>
-										<ul>
+										<i class="menu"></i>Routes &amp; Schedules
+										<ul class="panel">
 										
 										
-										<li id="routes-overview-dropdown-link">
-												Routes Overview
-											</li>
+										<!--<li id="routes-overview-dropdown-link">
+<span style="color: #a5c5e1">--------------------</span> &nbsp;Routes Overview &nbsp;<span style="color: #a5c5e1">--------------------</span>
+											</li>-->
 											
 										<?php
 										$query = new WP_Query(array(
-											'posts_per_page' => -1,
+											
 											"post_type"=>"route_line",
-											'orderby' => 'meta_value', 
-											"order" => "ASC"
+											'orderby' => 'meta_value_num', 
+											'meta_key' => 'route_line_id',
+											"order" => "ASC",
+											'posts_per_page' => '7',
+											'page' => '0',
+
 								
 
 											));
@@ -39,15 +43,66 @@
 												
 												if ( $query->have_posts() ) {
 													?>
-													<ul>
+													<ul id="routes-panel-left">
 													
 													<?php
 														$route_line_count = 0;
 														while ( $query->have_posts() ) {
 															$query->the_post();
-											
+
 															?>
-																<li rel="<?php echo get_the_permalink();?>" class="linked-div <?php if ($route_line_count < 8) { echo 'dropdown-left-col';} else { echo 'dropdown-right-col'; } ?>" >
+																<li rel="<?php echo get_the_permalink();?>" class="linked-div " >
+																	
+																	<?php 
+																	$routes = explode(',',get_field('route_line_routes'));
+																	foreach($routes as &$route) {
+																	?>
+																	
+																	<i id="icon-sml-<?php echo $route ?>" class="route-icon route-icon-sml" > </i>
+																	
+																	<?php } 
+																	
+																	
+																	the_title(); ?>
+																</li>
+																
+														<?php
+														
+															$route_line_count ++;
+														}
+														?>
+														</ul>
+														<?php
+													}  
+											wp_reset_postdata();
+											
+											
+											$query = new WP_Query(array(
+											
+											"post_type"=>"route_line",
+											'orderby' => 'meta_value_num', 
+											'meta_key' => 'route_line_id',
+											"order" => "ASC",
+											'posts_per_page' => '7',
+											'offset' => '7',
+
+								
+
+											));
+
+						
+												 
+												if ( $query->have_posts() ) {
+													?>
+													<ul id="routes-panel-right">
+													
+													<?php
+														$route_line_count = 0;
+														while ( $query->have_posts() ) {
+															$query->the_post();
+															
+															?>
+																<li rel="<?php echo get_the_permalink();?>" class="linked-div " >
 																	
 																	<?php 
 																	$routes = explode(',',get_field('route_line_routes'));
@@ -62,6 +117,7 @@
 																	the_title(); ?>
 																</li>
 														<?php
+														
 															$route_line_count ++;
 														}
 														?>

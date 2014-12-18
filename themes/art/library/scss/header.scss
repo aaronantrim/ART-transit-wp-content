@@ -27,7 +27,7 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 	
 	#transit-name {
 		float: left;
-		margin-left: 240px;
+		margin-left: 230px;
 		padding-left: 10px;
 		color: white;
 		font-size: 1.3em;
@@ -40,13 +40,27 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 	#inner-content {
 		width: 1151px;
 	}
+	
+	@media only screen and (min-width: 1220px) {
+		
+	#desktop-main-links {
+		ul {
+			padding: 0;
+			margin: 0;
+			float: left;
+			width: 50%;
+			}
+		}
+	}
+	
+	
 
 	#desktop-main-links {
 	ul {
 		padding: 0;
 		margin: 0;
 		float: left;
-		width: 50%;
+		width: 53%;
 		li {
 			z-index: 250;
 			position: relative;
@@ -54,7 +68,12 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 			float: left;
 			height: 55px;
 		
-			
+			color:white;
+				text-decoration: none;
+				line-height: 55px;
+				
+				text-transform: uppercase;
+				letter-spacing: 2px;
 			
 			a:link, a:active, a:visited, a:hover {
 				color:white;
@@ -65,7 +84,7 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 				letter-spacing: 2px;
 			}
 			
-			ul {
+			ul.panel {
    					
    					position: absolute;
    					top: -99999px;
@@ -91,13 +110,39 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
    -o-transition: width 0.3s; /* Opera */
    
    			
-   				ul {
+   				ul.panel {
    				
    					li#routes-overview-dropdown-link {
    					
    						width: 100%;
    						text-align: center;
+   						
    					
+   					}
+   					
+   					ul {
+   						width: 50%;
+   						float: left;
+   						
+   						li {
+   							width: 100%;
+   							font-size: .8em;
+   							color:white;
+				text-decoration: none;
+				line-height: 55px; 
+				
+				text-transform: uppercase;
+				letter-spacing: 0px;
+   							line-height: 3em;
+   						}
+   					}
+   					
+   					ul#routes-panel-right {
+   						width: 45%
+   					}
+   					
+   					ul#routes-panel-left {
+   						width: 55%
    					}
    					
    					position: absolute;
@@ -106,6 +151,8 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
    					border-right: 1px solid lighten($border-color,5);
    					border-left: 1px solid lighten($border-color,5);
    					border-bottom: 1px solid lighten($border-color,5);
+   					border-bottom-right-radius: 5px;
+   					border-bottom-left-radius: 5px;
 					right: -1px;
 					background-color: lighten(#005285, 5);
 					-webkit-box-shadow: 0px 23px 23px 0px rgba(50, 50, 50, 0.51);
@@ -113,8 +160,9 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 					box-shadow:         0px 23px 23px 0px rgba(50, 50, 50, 0.51);
 					
 					
-					li.dropdown-left-col {
+					li {
 						float: left;
+						clear: left;
 						
 					}
 					li.dropdown-right-col {
@@ -145,20 +193,20 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 		li#get-passes-link, li#how-to-ride-link,li#routes-and-schedules-link  {
 			
 			font-size: 1em;
-			padding-right: 3%;
-				padding-left: 3%;
+			padding-right: 1%;
+			padding-left: 1%;
 		
 		}
 		
-		/*@media only screen and (min-width: 1220px) {
-			li#get-passes-link, li#how-to-ride-link  {
+		@media only screen and (min-width: 1230px) {
+			li#get-passes-link, li#how-to-ride-link,li#routes-and-schedules-link  {
 			
 				font-size: 1.2em;
-				padding-right: 5%;
-				padding-left: 5%;
+				padding-right: 3%;
+				padding-left: 3%;
 		
 			}
-		}*/
+		}
 		
 		li#get-passes-link {
 			i {
@@ -208,6 +256,7 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 		
 		
 		li#routes-and-schedules-link  {
+		color: white;
 			i.menu {
 				float: left;
 				background-image: url(../images/art-sprites.png);
@@ -241,7 +290,7 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 		font-size: 20px;
 		//margin-right: 20px;
 		position: fixed; 
-		top: 0;
+		top: 4px;
 		right: 0;
 		a:link, a:active, a:visited{
 			color: white;

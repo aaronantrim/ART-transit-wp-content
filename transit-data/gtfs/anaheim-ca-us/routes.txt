@@ -1,22 +1,21 @@
-﻿agency_id,route_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
-248,1715,"","Amtrak Express","",3,,,
-248,1716,"21","","",3,http://www.rideart.org/schedules/route21/,,
-248,1699,"4","Grand Plaza Line","",3,,41AE2D,ffffff
-248,1700,"5","Grand Plaza Line","",3,,41AE2D,ffffff
-248,1702,"7","Hotel Circle Clementine Line","",3,,EC8C38,000000
-248,1703,"8","Hotel Circle Clementine Line","",3,,EC8C38,000000
-248,1704,"9","Katella Line","",3,,0381B3,ffffff
-248,1705,"10","Downtown Packing District Line","",3,,004EB5,ffffff
-248,1707,"12","Manchester Ave. Line","",3,,E442B1,ffffff
-248,1708,"14","ARTIC Sportstown Line","",3,,8F898B,ffffff
-248,1709,"15","ARTIC Sportstown Line","",3,,8F898B,ffffff
-248,1714,"17","Canyon Line","",3,,EDCE51,000000
-248,1712,"18","Buena Park Line","",3,,31DBC1,000000
-248,1713,"19","Mainplace Line","",3,,390FA3,ffffff
-248,1711,"20","Toy Story Line","",3,,008D87,ffffff
-248,1697,"2","Harbor Blvd. Line","",3,,E43017,ffffff
-248,1696,"1","Harbor Blvd. Line","",3,,E43017,ffffff
-248,1698,"3","Grand Plaza Line","",3,,41AE2D,ffffff
-248,1701,"6","Hotel Circle Clementine Line","",3,,EC8C38,000000
-248,1706,"11","Ball Road Line","",3,,A02EB9,ffffff
-248,1710,"16","Orange Line","",3,,F876C0,000000
+﻿agency_id,route_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,first_bus,last_bus
+248,1716,21,Canyon Line,via East La Palma Ave.:0,3,http://www.rideart.org/schedules/route21/,EDCE51,0,7:00 AM,12:30 AM
+248,1711,20,Toy Story Line,via Disney Way:60,3,,008D87,ffffff,6:20 AM,12:30 AM
+248,1713,19,Mainplace Line,via I-5 Freeway & Main St.:0,3,,390FA3,ffffff,6:20 AM,12:30 AM
+248,1712,18,Buena Park Line,via West La Palma Ave.:0,3,,31DBC1,0,9:00 AM,9:00 PM
+248,1714,17,Canyon Line,via East La Palma Ave.:0,3,,EDCE51,0,7:00 AM,5:08 PM
+248,1710,16,Orange Line,via Chapman Ave.:60,3,,F876C0,0,6:20 AM,12:30 AM
+248,1709,15,ARTIC Sports Complex Line,:20,3,,8F898B,ffffff,6:20 AM,12:30 AM
+248,1708,14,ARTIC Sports Complex Line,:20,3,,8F898B,ffffff,6:20 AM,12:30 AM
+248,1707,12,Manchester Ave. Line,via Disney Way:20,3,,E442B1,ffffff,6:20 AM,12:30 AM
+248,1706,11,Ball Road Line,via Ball Rd.:20,3,,A02EB9,ffffff,6:20 AM,12:30 PM
+248,1705,10,Downtown Packing District Line,via Anaheim Blvd.:20,3,,004EB5,ffffff,6:20 AM,12:30 AM
+248,1704,9,Katella Line,via Katella Ave.:20,3,,0381B3,ffffff,6:20 AM,12:30 AM
+248,1703,8,Hotel Circle Clementine Line,via Clementine St.:20,3,,EC8C38,0,6:20 AM,12:30 AM
+248,1702,7,Hotel Circle Clementine Line,via Clementine St.:20,3,,EC8C38,0,6:20 AM,12:30 AM
+248,1701,6,Hotel Circle Clementine Line,via Clementine St.:20,3,,EC8C38,0,6:20 AM,12:30 AM
+248,1700,5,Grand Plaza Line,via Harbor Blvd. & Convention Way:20,3,,41AE2D,ffffff,6:20 AM,12:30 AM
+248,1699,4,Grand Plaza Line,via Harbor Blvd. & Convention Way:20,3,,41AE2D,ffffff,6:20 AM,12:30 AM
+248,1698,3,Grand Plaza Line,via Harbor Blvd. & Convention Way:20,3,,41AE2D,ffffff,6:20 AM,12:30 AM
+248,1697,2,Harbor Blvd. Line,via Harbor Blvd.:20,3,,E43017,ffffff,6:20 AM,12:30 AM
+248,1696,1,Harbor Blvd. Line,via Harbor Blvd.:20,3,,E43017,ffffff,6:20 AM,12:30 AM

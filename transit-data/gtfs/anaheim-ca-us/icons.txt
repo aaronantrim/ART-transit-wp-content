@@ -1,1 +1,15 @@
-icon_id,icon_url,width_px,height_px
+base_name,x_offset,y_offset,width,height
+disneyland,0,0,239,198
+downtown_disney_district,248,16,190,184
+center_street_promenade,446,68,194,108
+anaheim_city_hall,646,78,161,116
+disney_california_adventure,2,224,297,168
+anaheim_packing_district,314,278,110,98
+gardenwalk,461,278,123,112
+honda_center,589,252,255,150
+artic,14,395,204,193
+anaheim_convention_center,283,425,248,138
+angel_stadium,610,423,196,152
+art_information_center,873,453,126,118
+outlets_at_the_orange,28,587,145,157
+westfield_mainplace,244,598,169,156

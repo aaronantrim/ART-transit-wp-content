@@ -1769,7 +1769,7 @@ view.
     border-right: 1px solid #268cb9; }
   #top-blue-link-banner #transit-name {
     float: left;
-    margin-left: 240px;
+    margin-left: 230px;
     padding-left: 10px;
     color: white;
     font-size: 1.3em;
@@ -1778,32 +1778,34 @@ view.
     padding-right: 1%; }
   #top-blue-link-banner #inner-content {
     width: 1151px; }
+  @media only screen and (min-width: 1220px) {
+    #top-blue-link-banner #desktop-main-links ul {
+      padding: 0;
+      margin: 0;
+      float: left;
+      width: 50%; } }
   #top-blue-link-banner #desktop-main-links ul {
     padding: 0;
     margin: 0;
     float: left;
-    width: 50%;
-    /*@media only screen and (min-width: 1220px) {
-    	li#get-passes-link, li#how-to-ride-link  {
-    	
-    		font-size: 1.2em;
-    		padding-right: 5%;
-    		padding-left: 5%;
-    
-    	}
-    }*/ }
+    width: 53%; }
     #top-blue-link-banner #desktop-main-links ul li {
       z-index: 250;
       position: relative;
       float: left;
-      height: 55px; }
+      height: 55px;
+      color: white;
+      text-decoration: none;
+      line-height: 55px;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
       #top-blue-link-banner #desktop-main-links ul li a:link, #top-blue-link-banner #desktop-main-links ul li a:active, #top-blue-link-banner #desktop-main-links ul li a:visited, #top-blue-link-banner #desktop-main-links ul li a:hover {
         color: white;
         text-decoration: none;
         line-height: 55px;
         text-transform: uppercase;
         letter-spacing: 2px; }
-      #top-blue-link-banner #desktop-main-links ul li ul {
+      #top-blue-link-banner #desktop-main-links ul li ul.panel {
         position: absolute;
         top: -99999px;
         z-index: 300; }
@@ -1822,37 +1824,61 @@ view.
       /* Firefox 4 */
       -o-transition: width 0.3s;
       /* Opera */ }
-      #top-blue-link-banner #desktop-main-links ul li:hover ul {
+      #top-blue-link-banner #desktop-main-links ul li:hover ul.panel {
         position: absolute;
         top: 55px;
         width: 600px;
         border-right: 1px solid #2a9cce;
         border-left: 1px solid #2a9cce;
         border-bottom: 1px solid #2a9cce;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
         right: -1px;
         background-color: #00629f;
         -webkit-box-shadow: 0px 23px 23px 0px rgba(50, 50, 50, 0.51);
         -moz-box-shadow: 0px 23px 23px 0px rgba(50, 50, 50, 0.51);
         box-shadow: 0px 23px 23px 0px rgba(50, 50, 50, 0.51); }
-        #top-blue-link-banner #desktop-main-links ul li:hover ul li#routes-overview-dropdown-link {
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel li#routes-overview-dropdown-link {
           width: 100%;
           text-align: center; }
-        #top-blue-link-banner #desktop-main-links ul li:hover ul li.dropdown-left-col {
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel ul {
+          width: 50%;
           float: left; }
-        #top-blue-link-banner #desktop-main-links ul li:hover ul li.dropdown-right-col {
+          #top-blue-link-banner #desktop-main-links ul li:hover ul.panel ul li {
+            width: 100%;
+            font-size: .8em;
+            color: white;
+            text-decoration: none;
+            line-height: 55px;
+            text-transform: uppercase;
+            letter-spacing: 0px;
+            line-height: 3em; }
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel ul#routes-panel-right {
+          width: 45%; }
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel ul#routes-panel-left {
+          width: 55%; }
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel li {
+          float: left;
+          clear: left; }
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel li.dropdown-right-col {
           float: right;
           clear: right; }
-        #top-blue-link-banner #desktop-main-links ul li:hover ul li {
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel li {
           padding: 10px;
           text-transform: uppercase;
           line-height: 32px; }
-        #top-blue-link-banner #desktop-main-links ul li:hover ul li:hover {
+        #top-blue-link-banner #desktop-main-links ul li:hover ul.panel li:hover {
           padding: 10px;
           background-color: #0071b8; }
     #top-blue-link-banner #desktop-main-links ul li#get-passes-link, #top-blue-link-banner #desktop-main-links ul li#how-to-ride-link, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link {
       font-size: 1em;
-      padding-right: 3%;
-      padding-left: 3%; }
+      padding-right: 1%;
+      padding-left: 1%; }
+    @media only screen and (min-width: 1230px) {
+      #top-blue-link-banner #desktop-main-links ul li#get-passes-link, #top-blue-link-banner #desktop-main-links ul li#how-to-ride-link, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link {
+        font-size: 1.2em;
+        padding-right: 3%;
+        padding-left: 3%; } }
     #top-blue-link-banner #desktop-main-links ul li#get-passes-link i {
       float: left;
       background-image: url(../images/art-sprites.png);
@@ -1878,24 +1904,26 @@ view.
       color: white; }
     #top-blue-link-banner #desktop-main-links ul li#how-to-ride-link:hover i {
       background-position: -293px -34px; }
-    #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link i.menu {
-      float: left;
-      background-image: url(../images/art-sprites.png);
-      background-position: -468px -13px;
-      width: 30px;
-      height: 20px;
-      margin-right: 6px;
-      position: relative;
-      top: 18px; }
-    #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:link, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:active, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:visited, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:hover {
+    #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link {
       color: white; }
+      #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link i.menu {
+        float: left;
+        background-image: url(../images/art-sprites.png);
+        background-position: -468px -13px;
+        width: 30px;
+        height: 20px;
+        margin-right: 6px;
+        position: relative;
+        top: 18px; }
+      #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:link, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:active, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:visited, #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link a:hover {
+        color: white; }
     #top-blue-link-banner #desktop-main-links ul li#routes-and-schedules-link:hover i.menu {
       background-position: -468px -35px; }
   #top-blue-link-banner #phone-number {
     line-height: 25px;
     font-size: 20px;
     position: fixed;
-    top: 0;
+    top: 4px;
     right: 0; }
     #top-blue-link-banner #phone-number a:link, #top-blue-link-banner #phone-number a:active, #top-blue-link-banner #phone-number a:visited {
       color: white;
@@ -2154,6 +2182,12 @@ view.
   /* IE6-8 fallback on horizontal gradient */
   background-image: url(../images/clear-grain.png); }
 
+#interactive-map-holder.fullscreen {
+  background: #0069aa; }
+
+.fullscreen #desktop-header-bar-map {
+  display: none; }
+
 #content {
   margin-top: 0px; }
 
@@ -2172,6 +2206,44 @@ img#map-gradient-overlay {
 .home .footer-nav li {
   float: left; }
 
+#full-screen-desktop {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999; }
+  #full-screen-desktop a:link {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 999; }
+
+#desktop-map-alerts {
+  position: absolute;
+  right: 180px;
+  bottom: 20px;
+  z-index: 999;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  z-index: 999; }
+  #desktop-map-alerts a:link, #desktop-map-alerts a:active, #desktop-map-alerts a:visited {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 999; }
+
+#alert-icon-lrg {
+  background: url(../images/art-sprites.png);
+  background-position: -118px -404px;
+  width: 43px;
+  height: 38px;
+  float: left;
+  margin-right: 5px; }
+
+.quote-author {
+  opacity: .7;
+  font-size: .7em; }
+
 #planner-wrapper {
   z-index: 200;
   position: relative;
@@ -2183,7 +2255,7 @@ img#map-gradient-overlay {
   min-width: 280px;
   position: absolute;
   left: 3%;
-  top: 83px;
+  top: 113px;
   background-color: white;
   min-height: 200px;
   -webkit-box-shadow: 0px 3px 17px 0px rgba(50, 50, 50, 0.75);
@@ -2263,7 +2335,7 @@ img#map-gradient-overlay {
         #planner .tab-holder a:link {
           font-size: 1.1em; } }
   #planner #from-items-container.open, #planner #to-items-container.open {
-    height: 230px; }
+    height: 240px; }
     #planner #from-items-container.open li.active .tab-holder, #planner #to-items-container.open li.active .tab-holder {
       background: white;
       border-top: 7px solid #67a3db;
@@ -2303,7 +2375,8 @@ img#map-gradient-overlay {
             padding: 0px 4px;
             border-radius: 3px;
             font-size: 1.1em;
-            margin-bottom: 2px; }
+            margin-bottom: 2px;
+            border-bottom: 1px solid #eee; }
           #planner #from-items-container.open li.active .place-pannel .place-col-1 ul li:hover, #planner #from-items-container.open li.active .place-pannel .place-col-2 ul li:hover, #planner #to-items-container.open li.active .place-pannel .place-col-1 ul li:hover, #planner #to-items-container.open li.active .place-pannel .place-col-2 ul li:hover {
             background: #ccebea; }
           #planner #from-items-container.open li.active .place-pannel .place-col-1 ul li.selected, #planner #from-items-container.open li.active .place-pannel .place-col-2 ul li.selected, #planner #to-items-container.open li.active .place-pannel .place-col-1 ul li.selected, #planner #to-items-container.open li.active .place-pannel .place-col-2 ul li.selected {
@@ -2342,11 +2415,17 @@ img#map-gradient-overlay {
           bottom: 8px; }
   #planner #to-items-container {
     clear: left; }
+  #planner .loc-input {
+    float: left;
+    clear: left; }
+  #planner #to-header {
+    clear: left; }
 
 #route-map {
   height: 470px;
   background: rgba(255, 255, 255, 0.1);
   border-top: 3px solid white;
+  border-bottom: 3px solid white;
   background-color: #0e71af;
   background-image: url(../images/clear-grain.png);
   background-position: top center;
@@ -2370,7 +2449,7 @@ img#map-gradient-overlay {
 #route-icons-and-header {
   padding-left: 31px;
   padding-top: 16px;
-  padding-bottom: 18px; }
+  padding-bottom: 8px; }
 
 .route-divider {
   height: 1px;
@@ -2405,6 +2484,11 @@ img#map-gradient-overlay {
     font-size: 1.5em;
     font-weight: 600;
     text-transform: uppercase; }
+  #generic-wide-container h2#route-title {
+    margin-top: 11px;
+    margin-left: 10px; }
+  #generic-wide-container #route-title.no-route-desc {
+    margin-top: 25px; }
   #generic-wide-container #route-alerts {
     margin-bottom: 0;
     margin-top: 10px; }
@@ -2697,6 +2781,51 @@ table.route-table {
   -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.21);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.21); }
 
+.bubble-spacer {
+  margin-right: 10px; }
+
+#generic-wide-container h2#route-title .street-desc {
+  font-weight: 300; }
+
+.route-header {
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+  color: white;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 30px;
+  border: 3px solid white;
+  border-right: 0;
+  border-left: 0; }
+
+.route-quicklinks {
+  font-size: .8em;
+  margin-top: 10px;
+  margin-left: 0;
+  padding-left: 0;
+  position: relative;
+  left: -5px; }
+  .route-quicklinks a:link, .route-quicklinks a:visited {
+    color: white;
+    margin-left: 3px;
+    margin-right: 3px; }
+
+.timetable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%; }
+  .timetable .timetable_headers th {
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -2707,8 +2836,17 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
+@media only screen and (min-width: 651px) {
+  #content {
+    min-width: 1000px; } }
 i {
   font-style: normal; }
+
+a:link, a:visited {
+  color: white; }
+
+a:hover {
+  color: #F0F8FF; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -2730,6 +2868,9 @@ body {
 
 #logo:hover {
   cursor: pointer; }
+
+.wrap {
+  min-width: 1200px; }
 
 .Dense-Regular {
   font-family: Dense-Regular;
@@ -2821,6 +2962,11 @@ body {
     left: 0px; } }
 #inner-content {
   width: 1151px; }
+  #inner-content a:link, #inner-content a:visited {
+    color: #9ee0ff; }
+
+#main a:link, #main a:visited, #route-alerts a:link, #route-alerts a:visited {
+  color: black; }
 
 #home-desktop-map-container {
   background: #8bb58a;
@@ -2835,6 +2981,12 @@ body {
   box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5); }
   #home-desktop-map-container img {
     height: 680px !important; }
+
+.leaflet-top .leaflet-control {
+  margin-top: 105px !important; }
+
+.single-route_line .leaflet-top .leaflet-control {
+  margin-top: 10px !important; }
 
 #map-alerts-wrap {
   position: absolute;
@@ -2971,9 +3123,12 @@ body {
     text-decoration: underline; }
   #how-to-ride-links li {
     margin-bottom: 7px;
-    font-size: 1.1em;
+    font-size: 1em;
     text-transform: uppercase;
-    font-weight: 600; }
+    font-weight: 200; }
+  #how-to-ride-links hr {
+    border-color: blue;
+    border-top: 0; }
 
 #connections-icon,
 #accessibility-icon,
@@ -3600,7 +3755,7 @@ h1#route-page-title {
     margin-left: 5px; }
 #sidebar1 .secondary li:before {
   content: "•  ";
-  color: #be7071;
+  color: #aed7e7;
   /* or whatever color you prefer */ }
 
 #featured-image-container {
@@ -3669,6 +3824,11 @@ h1#route-page-title {
   min-height: 500px;
   padding: 10px 30px;
   color: white; }
+  #sidebar1 #how-to-ride-links li {
+    font-weight: 300; }
+  #sidebar1 #menu-home-right-secondary {
+    margin-left: 0;
+    font-size: 1em; }
 
 #blue-top-divider {
   width: 100%;

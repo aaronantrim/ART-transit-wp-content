@@ -1,167 +1,222 @@
-#icon-lrg-1 { 
+#icon-lrg-5 { 
  width: 86px;  height: 86px; 
 background-image: url(../images/route-icons.png);
   background-position: -106px -4px;
 }
-#icon-med-1 { 
+#icon-med-5 { 
  width: 52px;  height: 52px; 
 background-image: url(../images/route-icons.png);
   background-position: -84px -92px;
 }
-#icon-sml-1 { 
+#icon-sml-5 { 
  width: 32px;  height: 32px; 
 background-image: url(../images/route-icons.png);
   background-position: -61px -147px;
 } 
-#icon-lrg-2 { 
- width: 86px;  height: 86px; 
+#icon-xsml-5 { 
+ width: 22px;  height: 22px; 
 background-image: url(../images/route-icons.png);
-  background-position: -193px -4px;
-}
-#icon-med-2 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -139px -92px;
-}
-#icon-sml-2 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -96px -147px;
-} 
-#icon-lrg-3 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -280px -4px;
-}
-#icon-med-3 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -194px -92px;
-}
-#icon-sml-3 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -131px -147px;
-} 
-#icon-lrg-4 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -367px -4px;
-}
-#icon-med-4 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -249px -92px;
-}
-#icon-sml-4 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -166px -147px;
-} 
-#icon-lrg-5 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -454px -4px;
-}
-#icon-med-5 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -304px -92px;
-}
-#icon-sml-5 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -201px -147px;
-} 
-#icon-lrg-6 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -541px -4px;
-}
-#icon-med-6 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -359px -92px;
-}
-#icon-sml-6 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -236px -147px;
+  background-position: -46px -182px;
 } 
 #icon-lrg-7 { 
  width: 86px;  height: 86px; 
 background-image: url(../images/route-icons.png);
-  background-position: -628px -4px;
+  background-position: -193px -4px;
 }
 #icon-med-7 { 
  width: 52px;  height: 52px; 
 background-image: url(../images/route-icons.png);
-  background-position: -414px -92px;
+  background-position: -139px -92px;
 }
 #icon-sml-7 { 
  width: 32px;  height: 32px; 
 background-image: url(../images/route-icons.png);
-  background-position: -271px -147px;
+  background-position: -96px -147px;
 } 
-#icon-lrg-8 { 
- width: 86px;  height: 86px; 
+#icon-xsml-7 { 
+ width: 22px;  height: 22px; 
 background-image: url(../images/route-icons.png);
-  background-position: -715px -4px;
-}
-#icon-med-8 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -469px -92px;
-}
-#icon-sml-8 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -306px -147px;
+  background-position: -71px -182px;
 } 
 #icon-lrg-9 { 
  width: 86px;  height: 86px; 
 background-image: url(../images/route-icons.png);
-  background-position: -802px -4px;
+  background-position: -280px -4px;
 }
 #icon-med-9 { 
  width: 52px;  height: 52px; 
 background-image: url(../images/route-icons.png);
-  background-position: -524px -92px;
+  background-position: -194px -92px;
 }
 #icon-sml-9 { 
  width: 32px;  height: 32px; 
 background-image: url(../images/route-icons.png);
-  background-position: -341px -147px;
+  background-position: -131px -147px;
+} 
+#icon-xsml-9 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -96px -182px;
 } 
 #icon-lrg-10 { 
  width: 86px;  height: 86px; 
 background-image: url(../images/route-icons.png);
-  background-position: -889px -4px;
+  background-position: -367px -4px;
 }
 #icon-med-10 { 
  width: 52px;  height: 52px; 
 background-image: url(../images/route-icons.png);
-  background-position: -579px -92px;
+  background-position: -249px -92px;
 }
 #icon-sml-10 { 
  width: 32px;  height: 32px; 
 background-image: url(../images/route-icons.png);
+  background-position: -166px -147px;
+} 
+#icon-xsml-10 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -121px -182px;
+} 
+#icon-lrg-20 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -454px -4px;
+}
+#icon-med-20 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -304px -92px;
+}
+#icon-sml-20 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -201px -147px;
+} 
+#icon-xsml-20 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -146px -182px;
+} 
+#icon-lrg-2 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -541px -4px;
+}
+#icon-med-2 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -359px -92px;
+}
+#icon-sml-2 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -236px -147px;
+} 
+#icon-xsml-2 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -171px -182px;
+} 
+#icon-lrg-21 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -628px -4px;
+}
+#icon-med-21 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -414px -92px;
+}
+#icon-sml-21 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -271px -147px;
+} 
+#icon-xsml-21 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -196px -182px;
+} 
+#icon-lrg-15 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -715px -4px;
+}
+#icon-med-15 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -469px -92px;
+}
+#icon-sml-15 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -306px -147px;
+} 
+#icon-xsml-15 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -221px -182px;
+} 
+#icon-lrg-14 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -802px -4px;
+}
+#icon-med-14 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -524px -92px;
+}
+#icon-sml-14 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -341px -147px;
+} 
+#icon-xsml-14 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -246px -182px;
+} 
+#icon-lrg-4 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -889px -4px;
+}
+#icon-med-4 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -579px -92px;
+}
+#icon-sml-4 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
   background-position: -376px -147px;
 } 
-#icon-lrg-11 { 
+#icon-xsml-4 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -271px -182px;
+} 
+#icon-lrg-8 { 
  width: 86px;  height: 86px; 
 background-image: url(../images/route-icons.png);
   background-position: -976px -4px;
 }
-#icon-med-11 { 
+#icon-med-8 { 
  width: 52px;  height: 52px; 
 background-image: url(../images/route-icons.png);
   background-position: -634px -92px;
 }
-#icon-sml-11 { 
+#icon-sml-8 { 
  width: 32px;  height: 32px; 
 background-image: url(../images/route-icons.png);
   background-position: -411px -147px;
+} 
+#icon-xsml-8 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -296px -182px;
 } 
 #icon-lrg-12 { 
  width: 86px;  height: 86px; 
@@ -178,139 +233,169 @@ background-image: url(../images/route-icons.png);
 background-image: url(../images/route-icons.png);
   background-position: -446px -147px;
 } 
-#icon-lrg-14 { 
- width: 86px;  height: 86px; 
+#icon-xsml-12 { 
+ width: 22px;  height: 22px; 
 background-image: url(../images/route-icons.png);
-  background-position: -1150px -4px;
-}
-#icon-med-14 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -744px -92px;
-}
-#icon-sml-14 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -481px -147px;
-} 
-#icon-lrg-15 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -1237px -4px;
-}
-#icon-med-15 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -799px -92px;
-}
-#icon-sml-15 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -516px -147px;
-} 
-#icon-lrg-16 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -1324px -4px;
-}
-#icon-med-16 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -854px -92px;
-}
-#icon-sml-16 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -551px -147px;
-} 
-#icon-lrg-20 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -1411px -4px;
-}
-#icon-med-20 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -909px -92px;
-}
-#icon-sml-20 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -586px -147px;
-} 
-#icon-lrg-18 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -1498px -4px;
-}
-#icon-med-18 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -964px -92px;
-}
-#icon-sml-18 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -621px -147px;
-} 
-#icon-lrg-19 { 
- width: 86px;  height: 86px; 
-background-image: url(../images/route-icons.png);
-  background-position: -1585px -4px;
-}
-#icon-med-19 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -1019px -92px;
-}
-#icon-sml-19 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -656px -147px;
+  background-position: -321px -182px;
 } 
 #icon-lrg-17 { 
  width: 86px;  height: 86px; 
 background-image: url(../images/route-icons.png);
-  background-position: -1672px -4px;
+  background-position: -1150px -4px;
 }
 #icon-med-17 { 
  width: 52px;  height: 52px; 
 background-image: url(../images/route-icons.png);
-  background-position: -1074px -92px;
+  background-position: -744px -92px;
 }
 #icon-sml-17 { 
  width: 32px;  height: 32px; 
 background-image: url(../images/route-icons.png);
+  background-position: -481px -147px;
+} 
+#icon-xsml-17 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -346px -182px;
+} 
+#icon-lrg-18 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1237px -4px;
+}
+#icon-med-18 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -799px -92px;
+}
+#icon-sml-18 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -516px -147px;
+} 
+#icon-xsml-18 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -371px -182px;
+} 
+#icon-lrg-19 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1324px -4px;
+}
+#icon-med-19 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -854px -92px;
+}
+#icon-sml-19 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -551px -147px;
+} 
+#icon-xsml-19 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -396px -182px;
+} 
+#icon-lrg-1 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1411px -4px;
+}
+#icon-med-1 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -909px -92px;
+}
+#icon-sml-1 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -586px -147px;
+} 
+#icon-xsml-1 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -421px -182px;
+} 
+#icon-lrg-3 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1498px -4px;
+}
+#icon-med-3 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -964px -92px;
+}
+#icon-sml-3 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -621px -147px;
+} 
+#icon-xsml-3 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -446px -182px;
+} 
+#icon-lrg-6 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1585px -4px;
+}
+#icon-med-6 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1019px -92px;
+}
+#icon-sml-6 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
+  background-position: -656px -147px;
+} 
+#icon-xsml-6 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -471px -182px;
+} 
+#icon-lrg-11 { 
+ width: 86px;  height: 86px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1672px -4px;
+}
+#icon-med-11 { 
+ width: 52px;  height: 52px; 
+background-image: url(../images/route-icons.png);
+  background-position: -1074px -92px;
+}
+#icon-sml-11 { 
+ width: 32px;  height: 32px; 
+background-image: url(../images/route-icons.png);
   background-position: -691px -147px;
 } 
-#icon-lrg- { 
+#icon-xsml-11 { 
+ width: 22px;  height: 22px; 
+background-image: url(../images/route-icons.png);
+  background-position: -496px -182px;
+} 
+#icon-lrg-16 { 
  width: 86px;  height: 86px; 
 background-image: url(../images/route-icons.png);
   background-position: -1759px -4px;
 }
-#icon-med- { 
+#icon-med-16 { 
  width: 52px;  height: 52px; 
 background-image: url(../images/route-icons.png);
   background-position: -1129px -92px;
 }
-#icon-sml- { 
+#icon-sml-16 { 
  width: 32px;  height: 32px; 
 background-image: url(../images/route-icons.png);
   background-position: -726px -147px;
 } 
-#icon-lrg-21 { 
- width: 86px;  height: 86px; 
+#icon-xsml-16 { 
+ width: 22px;  height: 22px; 
 background-image: url(../images/route-icons.png);
-  background-position: -1846px -4px;
-}
-#icon-med-21 { 
- width: 52px;  height: 52px; 
-background-image: url(../images/route-icons.png);
-  background-position: -1184px -92px;
-}
-#icon-sml-21 { 
- width: 32px;  height: 32px; 
-background-image: url(../images/route-icons.png);
-  background-position: -761px -147px;
+  background-position: -521px -182px;
 } 
 

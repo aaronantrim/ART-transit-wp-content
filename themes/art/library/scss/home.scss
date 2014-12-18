@@ -1,24 +1,35 @@
 #interactive-map-holder {
 	position: relative;
-	
 	height: 830px;
 	
-	
 	background: #0d72ae; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZDcyYWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5NyUiIHN0b3AtY29sb3I9IiMwYzYzOTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-background: -moz-radial-gradient(center, ellipse cover,  #0d72ae 0%, #0c6397 97%); /* FF3.6+ */
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0d72ae), color-stop(97%,#0c6397)); /* Chrome,Safari4+ */
-background: -webkit-radial-gradient(center, ellipse cover,  #0d72ae 0%,#0c6397 97%); /* Chrome10+,Safari5.1+ */
-background: -o-radial-gradient(center, ellipse cover,  #0d72ae 0%,#0c6397 97%); /* Opera 12+ */
-background: -ms-radial-gradient(center, ellipse cover,  #0d72ae 0%,#0c6397 97%); /* IE10+ */
-background: radial-gradient(ellipse at center,  #0d72ae 0%,#0c6397 97%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d72ae', endColorstr='#0c6397',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-background-image: url(../images/clear-grain.png);
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZDcyYWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5NyUiIHN0b3AtY29sb3I9IiMwYzYzOTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-radial-gradient(center, ellipse cover,  #0d72ae 0%, #0c6397 97%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0d72ae), color-stop(97%,#0c6397)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #0d72ae 0%,#0c6397 97%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #0d72ae 0%,#0c6397 97%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #0d72ae 0%,#0c6397 97%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #0d72ae 0%,#0c6397 97%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d72ae', endColorstr='#0c6397',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+	background-image: url(../images/clear-grain.png);
 }
 
+
+#interactive-map-holder.fullscreen {
+	background: #0069aa;
+}
+
+.fullscreen #desktop-header-bar-map {
+
+display: none;
+
+}
+
+
+
 #content {
-margin-top: 0px;
+	margin-top: 0px;
 }
 
 img#map-gradient-overlay {
@@ -32,9 +43,58 @@ img#map-gradient-overlay {
 }
 
 .cf:after{
-content: none;
+	content: none;
 }
 
 .home .footer-nav li {
-float: left;
+	float: left;
+}
+
+#full-screen-desktop {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	z-index: 999;
+	
+	a:link {
+		color: white;
+		font-size: 1.5em;
+		font-weight: bold;
+		z-index: 999;
+		
+	}
+}
+
+#desktop-map-alerts {
+	position: absolute;
+	right: 180px;
+	bottom: 20px;
+	z-index: 999;
+	
+	color: white;
+		font-size: 1.5em;
+		font-weight: bold;
+		z-index: 999;
+	
+	a:link, a:active, a:visited {
+		color: white;
+		font-size: 1.5em;
+		font-weight: bold;
+		z-index: 999;
+		
+	}
+}
+
+#alert-icon-lrg {
+	background: url(../images/art-sprites.png);
+	background-position: -118px -404px;
+	width: 43px;
+	height: 38px;
+	float: left;
+	margin-right: 5px;
+}
+
+.quote-author {
+	opacity: .7;
+	font-size: .7em;
 }

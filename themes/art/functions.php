@@ -22,6 +22,15 @@ LAUNCH BONES
 Let's get everything up and running.
 *********************/
 
+
+function get_gtfs_name() {
+	return "anaheim-new-ca-us";
+}
+
+function get_route_number_from_id() {
+	
+}
+
 function bones_ahoy() {
 
   // let's get language support going, if you need it
@@ -226,8 +235,10 @@ add_action( 'init', 'register_my_menus' );
 
 function the_breadcrumb() {
     global $post;
-    echo '<ul id="breadcrumbs">';
-   /* if (!is_home()) {
+  /*   echo '<ul id="breadcrumbs">';
+   
+   
+   if (!is_home()) {
         echo '<li><a href="';
         echo get_option('home');
         echo '">';
@@ -285,7 +296,7 @@ function the_breadcrumb() {
     elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     
-    */
+  
     
     if (!is_home()) {
         echo '<li><a href="';
@@ -329,8 +340,14 @@ function the_breadcrumb() {
 			{
 				$post_type_data = get_post_type_object( $post_type );
 				$post_type_slug = $post_type_data->rewrite['slug'];
-				echo '<li><a href="'.get_post_type_archive_link( $post_type ).'">';
-				 echo $post_type_data->label;
+				
+				if($post_type_data->label =="route_lines") {
+					echo '<li><a href="/routes-and-schedules">';
+					echo 'Routes Overview'; 
+				} else {
+					echo '<li><a href="'.get_post_type_archive_link( $post_type_slug ).'">';
+				 	echo $post_type_data->label;
+				 }
 				echo '</a></li>';
 			}
     	
@@ -341,10 +358,7 @@ function the_breadcrumb() {
             
             
                 echo '</li><li class="separator"> > </li><li>';
-                if( $post_type_data = get_post_type_object( $post_type )->rewrite['slug'] == 'routes-and-schedules') {
                 
-                	echo 'Route '.get_field('route_number').'&nbsp; : &nbsp;';
-                }
 				
                 the_title();
                 echo '</li>';
@@ -362,6 +376,7 @@ function the_breadcrumb() {
     echo '</ul>';
     
     }
+      */
     
 }
 
@@ -505,40 +520,7 @@ function codex_route_init() {
 
 	register_post_type( 'route_line', $args );
 	
-	$dar_labels = array(
-		'name'               => _x( 'Dail-A-Ride', 'post type general name' ),
-		'singular_name'      => _x( 'dar', 'post type singular name' ),
-		'menu_name'          => _x( 'Dial-A-Ride', 'admin menu'),
-		'name_admin_bar'     => _x( 'Dial-A-Ride', 'add new on admin bar'),
-		'add_new'            => _x( 'Add New', 'dar'),
-		'add_new_item'       => __( 'Add New Page'),
-		'new_item'           => __( 'New Dial-A-Ride Page'),
-		'edit_item'          => __( 'Edit Dial-A-Ride Page'),
-		'view_item'          => __( 'View Dial-A-Ride Page'),
-		'all_items'          => __( 'All Dial-A-Ride Pages'),
-		'search_items'       => __( 'Search Dial-A-Ride Pages'),
-		'parent_item_colon'  => __( 'Parent Dial-A-Ride Pages:'),
-		'not_found'          => __( 'No Dial-A-Ride Pages found.'),
-		'not_found_in_trash' => __( 'No Dial-A-Ride Pages found in Trash.')
-	);
-
-	$args = array(
-		'menu_icon' => '',
-		'labels'             => $dar_labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'dial-a-ride' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => true,
-		'menu_position'      => null,
-		'supports'           => array( 'title', 'revisions' )
-	);
-
-	register_post_type( 'dar', $args );
+	
 	
 	$labels = array(
 		'name'               => _x( 'Timetables', 'post type general name' ),
@@ -771,7 +753,11 @@ function get_alertCount() {
 				
 			);
  
-	// get results
+	
+	
+	/*$args = array(
+				'numberposts' => -1,
+				'post_type' => 'alert');*/
 	$the_query = new WP_Query( $args );
 
 
@@ -821,72 +807,15 @@ foreach($service_areas as &$service_area) {
 		)
 	);
 	
+	/*  if ( is_admin() ) {
+          $terms = get_terms( 'alert-zone', array( 'fields' => 'ids', 'hide_empty' => false ) );
+          foreach ( $terms as $value ) {
+               wp_delete_term( $value, 'alert-zone' );
+          }
+     } */
 	
-	$route_names = array(
-	"100-bakersfield-lancaster",
-	"110-delano-bakersfield",
-	"115-lost-hills-bakersfield",
-	"120-taft-bakersfield",
-	"130-frazier-park-bakersfield",
-	"140-lamont-bakersfield-north",
-	"142-lamont-bakersfield-weekend-loop",
-	"145-lamont-bakersfield-south",
-	"150-lake-isabella-bakersfield",
-	"210-frazier-park-local",
-	"220-lake-isabella-kernville",
-	"223-lake-isabella-bodfish",
-	"225-lake-isabella-onyx",
-	"227-lake-isabella-ridgecresteastkern",
-	"227-lake-isabella-ridgecrestkernrivervalley",
-	"230-mojave-ridgecrest",
-	"240-boron-mojave",
-	"250-california-city-lancaster",
-	"dial-bakersfield-medical",
-	"dial-bakersfield-medical",
-	"dial-bakersfield-medical",
-	"dial-bakersfield-medical",
-	"dial-frazier-park",
-	"dial-kern-river-valley",
-	"dial-lamont",
-	"dial-lost-hills",
-	"dial-mojave",
-	"dial-rosamond",
-	"dial-taft",
-	"dial-tehachapi");
-	foreach($route_names as &$route_name) {
-		wp_insert_term(
-		 $route_name, // the term 
-		  'alert-zone', // the taxonomy
-		  array(
-			'description'=> '',
-			'slug' => $route_name
-		  )
-		);
-	}
-	wp_insert_term(
-		 'All Routes', // the term 
-		  'alert-zone', // the taxonomy
-		  array(
-			'description'=> '',
-			'slug' => 'all-routes'
-		  )
-		);
-		wp_insert_term(
-		 'All Routes and Dail-A-Ride', // the term 
-		  'alert-zone', // the taxonomy
-		  array(
-			'description'=> '',
-			'slug' => 'all'
-		  )
-		);
-		wp_insert_term(
-		 'All Dial-A-Ride', // the term 
-		  'alert-zone', // the taxonomy
-		  array(
-			'description'=> '',
-			'slug' => 'all-dial'
-		  )
-		);
+	
+		
 
 }
 
@@ -1375,6 +1304,100 @@ function remove_menus(){
 
 }
 add_action( 'admin_menu', 'remove_menus' );
+
+
+function makePlacePanel($_type, $_min, $_max) {
+
+
+?>
+					
+					
+					<?php 
+					
+					$menu_list = "";
+					
+					$args = array(
+					'posts_per_page' => 8,
+					'offset' => 0,
+        'order'                  => 'ASC',
+        'orderby'                => 'menu_order',
+        'post_type'              => 'nav_menu_item',
+        'post_status'            => 'publish',
+        'output'                 => ARRAY_A,
+        'output_key'             => 'menu_order',
+        'update_post_term_cache' => false ); 
+        
+         $menu_items = wp_get_nav_menu_items( $_type.'_planner_menu', $args ); 
+         
+        
+	
+	?>
+					
+						<div class="place-col-1">
+							<ul>
+							<?php
+								$menu_count = 0;
+								 foreach ( (array) $menu_items as $key => $menu_item ) {
+								 if($menu_count < 8){
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$menu_list .= '<li>'.$title . '</li>';
+			}
+			$menu_count ++;
+		}
+		echo $menu_list;
+		
+		
+		?>
+						
+							</ul>
+						</div><!-- end #place-col-1 -->
+						<?php $args = array(
+					'posts_per_page' => 8,
+					'offset' => 8,
+        'order'                  => 'ASC',
+        'orderby'                => 'menu_order',
+        'post_type'              => 'nav_menu_item',
+        'post_status'            => 'publish',
+        'output'                 => ARRAY_A,
+        'output_key'             => 'menu_order',
+        
+        'update_post_term_cache' => false ); 
+        
+         $hotel_items = wp_get_nav_menu_items($_type.'_planner_menu', $args ); 
+         
+        
+	
+	?>
+					
+						<div class="place-col-2">
+							<ul>
+							<?php
+								$menu_count = 0;
+								$menu_list = "";
+								 foreach ( (array) $hotel_items as $key => $menu_item ) {
+								 if($menu_count >= 8 && $menu_count < 16){
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$menu_list .= '<li>'.$title . '</li>';
+			}
+			$menu_count ++;
+		}
+		echo $menu_list;
+		
+		?>
+						
+							</ul>
+						</div><!-- end #place-col-1 -->
+					
+					
+					
+					
+					
+					<?php
+
+}
+
 
 
 

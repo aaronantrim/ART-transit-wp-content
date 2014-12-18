@@ -297,9 +297,9 @@ $(window).load( function() {
 });
 
 function highlightAnchorH2(name) {
-	var origCol =  $('a[name=\''+name.slice(1)+'\']').parent().css('background-color');
-	$('a[name=\''+name.slice(1)+'\']').parent().css('background-color', 'yellow');
-	$('a[name=\''+name.slice(1)+'\']').parent().animate( { backgroundColor: origCol }, 700);
+//	var origCol =  $('a[name=\''+name.slice(1)+'\']').parent().css('background-color');
+//	$('a[name=\''+name.slice(1)+'\']').parent().css('background-color', 'yellow');
+//	$('a[name=\''+name.slice(1)+'\']').parent().animate( { backgroundColor: origCol }, 700);
 }
 
 function shadeColor1(color, percent) {  

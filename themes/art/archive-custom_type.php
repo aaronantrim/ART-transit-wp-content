@@ -17,6 +17,27 @@
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
+				
+				
+				<?php the_breadcrumb() ?>
+				
+					<?php if(is_archive()) {
+					
+					?>
+					
+					<h1 id="page-title" class="over-blue"><?php post_type_archive_title(); ?></h1>
+					
+					<?php
+					
+					} else if(is_search()) { ?>
+					
+					<h1 id="page-title" class="over-blue"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+					
+					
+					<?php } else { ?>
+					<h1 id="page-title" class="over-blue"><?php the_title() ?></h1>
+					
+						<?php }  ?>
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
@@ -55,7 +76,7 @@
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+											<h1><?php _e( 'Oops, Post Not Foun d!', 'bonestheme' ); ?></h1>
 										</header>
 										<section class="entry-content">
 											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>

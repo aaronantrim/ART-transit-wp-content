@@ -136,7 +136,20 @@ function trillium_gtfs_update_settings_page() {
 		$handle = fopen(get_site_url()."/wp-content/transit-data/gtfs/anaheim-ca-us/routes.txt", "r");
 	
 		$route_lines = array();
+	// replace from gtfs with "route-1, route-2 etc... amtrak, all routes, all lines
 	
+	
+	
+	
+	
+	wp_insert_term(
+		 'System-Wide', // the term 
+		  'alert-zone', // the taxonomy
+		  array(
+			'description'=> '',
+			'slug' => 'all-routes'
+		  )
+		);
 	
 		if ($handle) {
 			echo 'sdf';
@@ -151,13 +164,27 @@ function trillium_gtfs_update_settings_page() {
 					$splitLine        =   explode(",", $line);
 					$agency_id        = $splitLine[0];
 					$route_id        = $splitLine[1];
-					$route_short_name    = $splitLine[2];
+					$route_short_name    = str_replace("\"","",$splitLine[2]);
 					$route_long_name       = $splitLine[3];
-					$route_desc    			= $splitLine[4];
+					$route_desc    			= explode(':',$splitLine[4])[0];
+					$route_freq    			= explode(':',$splitLine[4])[1]; 
 					$route_type 		= $splitLine[5];
 					$route_url		 	= $splitLine[6];
 					$route_color 		= $splitLine[7];
 					$route_text_color 	= $splitLine[8];
+					$route_first_bus 	= $splitLine[9];
+					$route_last_bus 	= $splitLine[10];
+					
+					
+					wp_insert_term(
+					 'route_'.$route_short_name, // the term 
+					  'alert-zone', // the taxonomy
+					  array(
+						'description'=> '',
+						'slug' => 'route_'.$route_short_name
+					  )
+					);
+					
 					
 					// make or update route_line array
 					if(!array_key_exists($route_long_name, $route_lines)) {
@@ -182,16 +209,43 @@ function trillium_gtfs_update_settings_page() {
 						update_field('field_5484fb3b6cdeb', $route_id        	, $post_to_update_id); 
 						update_field('field_5484fb446cdec', intval(str_replace("\"","",$route_short_name)), $post_to_update_id); 
 						update_field('field_5484fb4a6cded',str_replace("\"","", $route_long_name) 	, $post_to_update_id); 
-						update_field('field_5484fb516cdee', $route_desc    	, $post_to_update_id); 
-						update_field('field_5484fb576cdef', $route_text_color		 , $post_to_update_id); 
+						update_field('field_5484fb516cdee', str_replace("\"","",$route_desc)    	, $post_to_update_id); 
+						update_field('field_5484fb576cdef', sanitize_text_field($route_text_color)		 , $post_to_update_id); 
 						update_field('field_5484fb2c6cdea', $route_color 			, $post_to_update_id); 
+						update_field('field_548ba96eaf994', str_replace("\"","",$route_freq).'*'.$route_first_bus.'*'.$route_last_bus    	, $post_to_update_id);  // fix this line
+						
+						
+						
 				}
 				$lineCount ++;
 			}
 			
-			while ($route_line = current($route_lines)) {
-			 			
+			
+			
+			function cmp($a, $b)
+			{
+				$aveA = 0;
+				$aveB = 0;
 				
+				foreach($a as &$a_route) {
+					$aveA += floatval($a_route);
+					echo $a_route.', ';
+				}
+				$aveA /= sizeof($a);
+				
+				foreach($b as &$b_route) {
+					$aveB += floatval($b_route);
+					echo $b_route.', ';
+				}
+				$aveB /= sizeof($b);
+			
+				return ($aveA<$aveB) ? -1 : 1;
+			}
+			
+			uasort($route_lines, "cmp");
+			
+			$route_line_count  = 0;
+			while ($route_line = current($route_lines)) {
 				$my_post = array(
 					  'post_title'    => str_replace("\"","",key($route_lines)),
 					  'post_name' => slugify(key($route_lines)),
@@ -204,6 +258,10 @@ function trillium_gtfs_update_settings_page() {
 				
 				$numberString = "";
 				$numCount = 0;
+				
+				
+				sort($route_line);
+				
 				foreach($route_line as $route_number) {
 					
 					$numberString.= $route_number;
@@ -213,9 +271,17 @@ function trillium_gtfs_update_settings_page() {
 				}
 				
 				update_field('field_547f8a196be2d', $numberString, $post_to_update_id);
+				update_field('field_547f89dd6be2a', $route_line_count, $post_to_update_id);
+				// update field_547f8a5a6be2f freq
 				
 				
-						
+				
+				update_field('field_547f89dd6be2a', $route_line_count, $post_to_update_id);
+				
+				
+				
+				
+				$route_line_count ++;	
 				
 				next($route_lines);
 			}
@@ -292,7 +358,92 @@ function trillium_gtfs_update_settings_page() {
 		}
 	
 	}
+	
+	
+	$handle = fopen(get_site_url()."/wp-content/transit-data/gtfs/anaheim-ca-us/icons2.txt", "r"); 
+	
+	?>
+	<style>
+	.map-icon-with-text {
+		background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/art/library/images/art-map-icons-with-text.png');
+		float: left;
+	}
+	.map-icon-without-text {
+		background-image: url('<?php echo get_site_url(); ?>/wp-content/themes/art/library/images/art-map-icons-without-text.png');
+		float: left;
+
+	}
+	
+	
+	<?php
+	
+		if ($handle) {
+			
+			$lineCount = 0;
+			 while (($line = fgets($handle)) !== false) {
+			 
+			 ?>
+			 
+			 <?php
+			
+				if($lineCount > 0) {
+				$splitLine = explode(",", $line);
+				$base_name = $splitLine[0];
+				$x_offset = $splitLine[1];
+				$y_offset = $splitLine[2];
+				$_width = $splitLine[3];
+				$_height = preg_replace( "/\r|\n/", "",$splitLine[4]);
+				$attraction_id = preg_replace( "/\r|\n/", "",$splitLine[5]);
+				
+				
+				echo '#_'.$attraction_id.'_map_icon { background-position:-'.$x_offset.'px -'.$y_offset.'px; width:'.$_width.'px; height:'.$_height.'px; }';
+				
+					
+
+				}
+				$lineCount ++;
+			}
+		}
+		
+		$handle = fopen(get_site_url()."/wp-content/transit-data/gtfs/anaheim-ca-us/icons2.txt", "r"); 
+	
+	?>
+	</style>
+	<div id="icons">
+	
+	<?php
+	
+		if ($handle) {
+			
+			$lineCount = 0;
+			 while (($line = fgets($handle)) !== false) {
+			 
+			 ?>
+			 
+			 <?php
+			
+				if($lineCount > 0) {
+				$splitLine = explode(",", $line);
+				$base_name = $splitLine[0];
+				$x_offset = $splitLine[1];
+				$y_offset = $splitLine[2];
+				$width = $splitLine[3];
+				$height = $splitLine[4];
+				$attraction_id = preg_replace( "/\r|\n/", "",$splitLine[5]);
+				
+				
+				echo '<i id="_'.$attraction_id.'_map_icon" class="map-icon-without-text" ></i>' ;
+				
+					
+
+				}
+				$lineCount ++;
+			}
+		}
+	
+	
 ?>
+	</div><!-- end #icons -->
 </div>
 <?php
 

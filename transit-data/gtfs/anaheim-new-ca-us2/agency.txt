@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_phone,agency_fare_url,agency_lang
+248,"Anaheim Resort Transportation (New service updates)","http://www.rideart.org/","America/Los_Angeles","(714) 563-5287","http://www.rideart.org/individual/","en"

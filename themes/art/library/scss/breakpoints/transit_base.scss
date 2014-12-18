@@ -1,6 +1,22 @@
 
+@media only screen and (min-width: 651px) {
+
+	#content {
+		min-width: 1000px;
+	}
+
+}
+
+
 i {
 	font-style: normal;
+}
+
+a:link, a:visited {
+color: white;
+}
+a:hover{
+	color: #F0F8FF;
 }
 
 h1, h2, h3, h4 , h5, h6 {
@@ -31,7 +47,7 @@ body {
 }
 
 .wrap {
-
+min-width: 1200px;
 }
 
 .Dense-Regular { 
@@ -141,7 +157,15 @@ body {
 	background-position: 0 -15px;
 	left: 0;
 	top: -30px;
-} 
+}
+
+:not(.mobile) .home	 #logo {
+
+	//	height: 210px;
+	//	background-position: 0 0px;
+//		left: 0px;
+	
+	}  
 
 @media only screen and (min-width: 1480px) {
 	#logo {
@@ -166,8 +190,27 @@ body {
 
 #inner-content {
 	width: 1151px;
+	
+	
+	
+	a:link, a:visited {
+		color:#9ee0ff;
+		//text-shadow: 1px 1px 0px rgba(0,0,0, 1);
+		
+	}
+	
+	
 }
 
+
+#main, #route-alerts {
+
+	a:link, a:visited {
+		color:black;
+		//text-shadow: 1px 1px 0px rgba(0,0,0, 1);
+		
+	}
+}
 
 
 #home-desktop-map-container {
@@ -185,6 +228,14 @@ body {
 	img {
 		height: 680px !important;
 	}
+}
+
+.leaflet-top .leaflet-control {
+margin-top: 105px !important;
+}
+
+.single-route_line .leaflet-top .leaflet-control {
+margin-top: 10px !important;
 }
 
 #map-alerts-wrap {
@@ -396,9 +447,14 @@ body {
 		
 	li {
 		margin-bottom: 7px;
-		font-size: 1.1em;
+		font-size: 1em;
 		text-transform: uppercase;
-		font-weight: 600;
+		font-weight: 200;
+	}
+	
+	hr {
+		border-color: blue;
+		border-top: 0;
 	}
 	
 }

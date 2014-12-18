@@ -1,0 +1,11 @@
+/*  anahiem resort transit map icons css */
+
+.image-map-icon {
+	background: url(art-map-sprites.png);
+}
+
+.disneyland-icon-lrg {
+	width: 216px;
+	height: 176;
+	background-position: -12px 0px;
+}

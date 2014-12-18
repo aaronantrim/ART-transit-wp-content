@@ -31,10 +31,12 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://momentjs.com/downloads/moment.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/jquery.csv-0.71.min.js"></script>
 
 		<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 			<script src="<?php echo get_template_directory_uri(); ?>/library/js/art.js"></script>
@@ -72,8 +74,25 @@
   ga('send', 'pageview');
 
 </script>
+
+
+		<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css' rel='stylesheet' />
+
+
+
 <meta name="google-translate-customization" content="f25af25643c7b829-5e44eb73351882d9-gcc7ef8ab8e200b71-13"></meta>
         
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19485598-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 	</head>
 
 	<body <?php body_class(); ?>>

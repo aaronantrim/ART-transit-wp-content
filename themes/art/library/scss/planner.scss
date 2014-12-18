@@ -10,7 +10,7 @@
 	min-width: 280px;
 	position: absolute;
 	left: 3%;
-	top: 83px;
+	top: 113px;
 	background-color: white;
 	min-height: 200px;
 	-webkit-box-shadow: 0px 3px 17px 0px rgba(50, 50, 50, 0.75);
@@ -150,7 +150,7 @@ box-shadow:         0px 3px 17px 0px rgba(50, 50, 50, 0.75);
 	}
 	
 	#from-items-container.open, #to-items-container.open { 
-		height: 230px;
+		height: 240px;
 		
 		li.active {
 		
@@ -216,6 +216,7 @@ box-shadow:         0px 3px 17px 0px rgba(50, 50, 50, 0.75);
 						border-radius: 3px;
 						font-size: 1.1em;
 						margin-bottom: 2px;
+						border-bottom: 1px solid #eee;
 					}
 				
 					li:hover {
@@ -285,6 +286,14 @@ box-shadow:         0px 3px 17px 0px rgba(50, 50, 50, 0.75);
 		
 	}
 	
+	.loc-input {
+		float: left;
+		clear: left;
+	}
+	
+	#to-header {
+	clear: left;
+	}
 	
 }
 
