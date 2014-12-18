@@ -8,7 +8,7 @@
 
 			<div id="content">
 
-
+<div id="interactive-map-holder-wrap" style="width:100%;height:100%;position: relative;">
 					<div id="interactive-map-holder">
 							<!--<img id="map-gradient-overlay" src="<?php echo get_template_directory_uri();?>/library/images/map-gradient-overlay.png"  />-->
 					
@@ -39,6 +39,9 @@
 						
 						
 					</div><!-- end #interactive-map-holder -->
+					
+					 <img id="draggingDisabled" src="<?php echo get_template_directory_uri(); ?>/AnaheimMap/images/map-gradient-overlay-copy.png" style="width: 100%; height: 100%; z-index: 100; position: absolute; top: 0; pointer-events: none;" /> 
+</div> <!-- end id="interactive-map-holder-wrap" -->
 					<?php
 					$link =  "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
 if (strpos($link, 'localhost') !== FALSE) { // check if on mamp/apache localhost
@@ -46,7 +49,7 @@ if (strpos($link, 'localhost') !== FALSE) { // check if on mamp/apache localhost
 }
 $link .= "wp-content/themes/art/AnaheimMap/";
 ?>
-				<script src="<?php echo $link; ?>generate-map-js.php?routes=1696,1697,1698,1699,1700,1701,1702,1703,1704,1705,1706,1707,1708,1709,1710,1711,1712,1713,1714,1716&system_map=true&map_files_base='<?php echo $link; ?>'"></script>
+				<script src="<?php echo $link; ?>generate-map-js.php?routes=1696,1697,1698,1699,1700,1701,1702,1703,1704,1705,1706,1707,1708,1709,1710,1711,1712,1713,1714,1716&system_map=true&container_id=interactive-map-holder"></script>
 
 
 <?php

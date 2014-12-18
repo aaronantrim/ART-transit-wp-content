@@ -27,6 +27,10 @@ function get_gtfs_name() {
 	return "anaheim-new-ca-us";
 }
 
+function get_local_base_path() {
+	return getcwd();
+}
+
 function get_route_number_from_id() {
 	
 }

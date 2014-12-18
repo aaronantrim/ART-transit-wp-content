@@ -1759,7 +1759,7 @@ view.
   color: white;
   font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 500;
-  z-index: 999;
+  z-index: 150;
   position: relative;
   -webkit-box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51);
   -moz-box-shadow: 0px 3px 23px 0px rgba(50, 50, 50, 0.51);
