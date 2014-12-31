@@ -2,7 +2,7 @@
 		
 		<h3 id="estimated-arrivals-title" class="mobile-padded" >Estimated Next arrivals for your current location 
 at [stop name]:</h2>
-		<div id="mobile-map-link" class="mobile-padded linked-div" rel="<?php echo get_permalink(71); ?>" >
+		<div id="mobile-map-link" class="mobile-padded linked-div" rel="<?php echo get_site_url(); ?>/mobile-map?system_map=true" >
 		<i></i>
 			Open a full-screen interactive map
 		</div><!-- end #mobile-map-link -->
@@ -104,7 +104,7 @@ at [stop name]:</h2>
 									
 												
 												<div class="mobile-drawer promo" style="display: none;">
-													<h3 class="mobile-padded"><?php the_field('home_promo_subtitle');?></h3>
+													<h3 class="mobile-padded" ><?php the_field('home_promo_subtitle');?></h3>
 													<img class="slide-image large linked-div" style="width: 100%" rel="<?php the_permalink(); ?>" src="
 													<?php
 										

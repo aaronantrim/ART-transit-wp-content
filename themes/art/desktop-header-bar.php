@@ -9,9 +9,9 @@
 								<ul>
 									<li id="get-passes-link" class="blue-border linked-div" rel="https://anaheim-transportation-network.myshopify.com">  
 										<i></i>
-										<a href="https://anaheim-transportation-network.myshopify.com">Get Passes</a>
+										<a href="http://rideart.org/fares-and-passes-2/">Get Passes</a>
 									</li>
-									<li id="how-to-ride-link" class="blue-border">
+									<li id="how-to-ride-link" class="blue-border linked-div" rel="<?php echo get_site_url();?>/how-to-ride">
 										<i></i>
 										<a href="<?php echo get_site_url();?>/how-to-ride">How to Ride</a>
 									</li>

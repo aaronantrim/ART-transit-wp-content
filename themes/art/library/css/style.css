@@ -2159,9 +2159,11 @@ view.
   #menu-footer li {
     float: left; }
 
-#interactive-map-holder {
+.home #interactive-map-holder, .single-route_line #interactive-map-holder {
   position: relative;
-  height: 830px;
+  height: 830px; }
+
+#interactive-map-holder {
   background: #0d72ae;
   /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -3203,7 +3205,7 @@ body {
     border-right: 1px solid #5e8aa9;
     margin-left: 43px;
     margin-bottom: 40px;
-    width: 40%; }
+    width: 25%; }
     #home-secondary-container #home-news-area h2 {
       margin-right: 43px;
       padding-bottom: 19px;

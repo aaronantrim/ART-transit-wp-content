@@ -480,7 +480,7 @@ $id_count ++;
 if (strpos($link, 'localhost') !== FALSE) { // check if on mamp/apache localhost
 $link .= "/art/";
 }
-$link .= "wp-content/themes/art/AnaheimMap/";
+$link .= "/wp-content/themes/art/AnaheimMap/";
 ?>
  <script src="<?php echo $link; ?>generate-map-js.php?routes=<?php echo $route_js_array; ?>&system_map=false&container_id=route-map"></script>
 
