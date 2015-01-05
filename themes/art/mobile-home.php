@@ -1,7 +1,7 @@
  
 		
-		<h3 id="estimated-arrivals-title" class="mobile-padded" >Estimated Next arrivals for your current location 
-at [stop name]:</h2>
+		<!--<h3 id="estimated-arrivals-title" class="mobile-padded" >Estimated Next arrivals for your current location 
+at [stop name]:</h3>--!>
 		<div id="mobile-map-link" class="mobile-padded linked-div" rel="<?php echo get_site_url(); ?>/mobile-map?system_map=true" >
 		<i></i>
 			Open a full-screen interactive map
@@ -69,6 +69,38 @@ at [stop name]:</h2>
 		<?php if(get_alertCount() > 0) { ?>
 		<h1 id="mobile-alerts-drawer" class="mobile-drawer-header"><i></i>Alerts</h1>
 		<div class="mobile-drawer" style="display: none;">
+			
+			<?php
+			$query = new WP_Query(array(
+							'post_type' => 'alert',
+
+							));
+
+						
+						
+								if ( $query->have_posts() ) {
+									?>
+									<ul>
+									
+									<?php
+									
+										while ( $query->have_posts() ) {
+											$query->the_post();
+											
+										?>
+											<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+												
+											
+										<?php
+										}
+										?>
+
+											</ul>
+										<?php
+										
+									}  
+							wp_reset_postdata();
+					?>
 			
 		</div>
 		<?php } else {

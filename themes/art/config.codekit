@@ -338,6 +338,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/AnaheimMap\/mobile-map.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/AnaheimMap\/mobile-map.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/AnaheimMap\/php-simple-proxy-master\/ba-simple-proxy.php": {
 		"fileType": 8192,
 		"ignore": 0,

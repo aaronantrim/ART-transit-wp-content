@@ -50,6 +50,10 @@ body {
 min-width: 1200px;
 }
 
+.mobile .wrap {
+min-width: 0px;
+}
+
 .Dense-Regular { 
 	font-family: Dense-Regular;
 	font-weight: normal;

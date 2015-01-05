@@ -35,6 +35,17 @@ function get_route_number_from_id() {
 	
 }
 
+add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+function remove_jquery_migrate( &$scripts)
+{
+    if(!is_admin())
+    {
+        $scripts->remove( 'jquery');
+        $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
+    }
+}
+
 function bones_ahoy() {
 
   // let's get language support going, if you need it

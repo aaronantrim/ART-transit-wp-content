@@ -1941,6 +1941,12 @@ view.
 .dropdown-right-col {
   float: right; }
 
+span.icon  {
+  background: blue;
+  width: 10px;
+  height: 10px;
+  float: left; }
+
 .mobile-all .header {
   font-size: 12px; }
 .mobile-all #logo {
@@ -2055,6 +2061,9 @@ view.
       height: 35px; }
     .mobile-all #mobile-top-bar-links ul li#how-to-ride-link a:link, .mobile-all #mobile-top-bar-links ul li#how-to-ride-link a:active, .mobile-all #mobile-top-bar-links ul li#how-to-ride-link a:visited, .mobile-all #mobile-top-bar-links ul li#how-to-ride-link a:hover {
       color: white; }
+    .mobile-all #mobile-top-bar-links ul li#quicklinks-link {
+      color: yellow;
+      background: blue; }
 .mobile-all #phone-number {
   line-height: 25px;
   font-size: 20px;
@@ -2210,29 +2219,71 @@ img#map-gradient-overlay {
 
 #full-screen-desktop {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
-  z-index: 999; }
+  right: 13px;
+  top: 170px;
+  z-index: 999;
+  background: #005285;
+  border: 1px solid #0071b8;
+  padding: 8px 12px 6px 12px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5); }
   #full-screen-desktop a:link {
     color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    z-index: 999; }
+    font-size: 1.1em;
+    z-index: 999;
+    color: #b8e4ff; }
+  #full-screen-desktop i {
+    background: url(../images/art-sprites.png);
+    background-position: -170px -415px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    position: relative;
+    top: 3px;
+    margin-right: 5px; }
+
+#full-screen-desktop:hover {
+  background: #0071b8;
+  border-color: #1fa9ff;
+  cursor: pointer; }
+  #full-screen-desktop:hover a:link {
+    color: yellow; }
 
 #desktop-map-alerts {
   position: absolute;
-  right: 180px;
-  bottom: 20px;
+  right: 13px;
+  top: 100px;
   z-index: 999;
+  background: #005285;
+  border: 1px solid #0071b8;
+  border-radius: 5px;
+  padding: 5px 14px 0px 8px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
   color: white;
   font-size: 1.5em;
-  font-weight: bold;
   z-index: 999; }
   #desktop-map-alerts a:link, #desktop-map-alerts a:active, #desktop-map-alerts a:visited {
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    z-index: 999; }
+    color: #b8e4ff;
+    font-size: 1.2em;
+    z-index: 999;
+    margin-top: 12px;
+    float: right; }
+    #desktop-map-alerts a:link i, #desktop-map-alerts a:active i, #desktop-map-alerts a:visited i {
+      position: relative;
+      top: -9px; }
+  #desktop-map-alerts a:hover {
+    color: yellow; }
+
+#desktop-map-alerts:hover {
+  background: #0071b8;
+  border-color: #1fa9ff;
+  cursor: pointer; }
+  #desktop-map-alerts:hover a:link {
+    color: yellow; }
 
 #alert-icon-lrg {
   background: url(../images/art-sprites.png);
@@ -2245,6 +2296,10 @@ img#map-gradient-overlay {
 .quote-author {
   opacity: .7;
   font-size: .7em; }
+
+#interactive-map-holder.leaflet-fullscreen-on {
+  background-color: #005285;
+  background-image: url("../images/clear-grain.png"); }
 
 #planner-wrapper {
   z-index: 200;
@@ -2873,6 +2928,9 @@ body {
 
 .wrap {
   min-width: 1200px; }
+
+.mobile .wrap {
+  min-width: 0px; }
 
 .Dense-Regular {
   font-family: Dense-Regular;

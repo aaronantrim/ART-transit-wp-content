@@ -1,11 +1,27 @@
 
 
+span.icon { 
+					background: blue;
+					width: 10px;
+					height: 10px;
+					float: left;
+					
+				}
+
+
 .mobile-all {
+
+
+
+
 
 i {
 
-	
+
 }
+
+
+	
 	
 	.header {
 font-size: 12px;
@@ -103,6 +119,9 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 			
 		}
 		
+		
+		
+		
 		li {
 			
 			float: left;
@@ -199,6 +218,15 @@ box-shadow:         0px 3px 23px 0px rgba(50, 50, 50, 0.51);
 				
 			//	background-position: -293px -34px;
 			
+			}
+		}
+		
+		
+		li#quicklinks-link {
+			color: yellow;
+			background: blue;
+			a {
+				
 			}
 		}
 		

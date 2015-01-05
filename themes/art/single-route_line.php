@@ -394,6 +394,11 @@ $query = new WP_Query(array(
 			
 <div id="generic-wide-container" style="padding-top: 20px;" >
 <a name="stop-table"></a>
+<?php
+	if($route_text_color == '0') {
+		$route_text_color = '000';
+	}
+?>
 <h2 class="route-header" style="background: #<?php echo $route_color;?>; color: #<?php echo $route_text_color; ?>;" >Stop table for the <?php the_title();?></h2>
 
 <?php
