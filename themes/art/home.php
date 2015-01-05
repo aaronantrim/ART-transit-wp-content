@@ -167,6 +167,9 @@ $link .= "wp-content/themes/art/AnaheimMap/";
 					</div> <!-- end #home-news-area -->
 						<div id="how-to-ride-links" class="secondary-col">
 								
+								<?php wp_nav_menu( array( 'theme_location' => 'center-home-menu' ) ); ?>
+								
+						<?php if(0) { ?>
 								<ul>
 								<li><a href="<?php echo get_permalink( 377 ); ?>" ><i id="how-to-ride-icon"></i>How to Ride Guide</a></li>
 								<li><a href="<?php echo get_permalink( 808 ); ?>" ><i id="faq-icon"></i>FAQ</a></li>
@@ -181,7 +184,7 @@ $link .= "wp-content/themes/art/AnaheimMap/";
 								</ul>
 								
 								
-								
+							<?php } ?>	
 								</div><!-- end #how-to-ride-links -->
 					
 					

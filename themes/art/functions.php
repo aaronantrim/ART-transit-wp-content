@@ -237,7 +237,8 @@ add_action('wp_print_styles', 'bones_fonts');
 
 function register_my_menus() {
   register_nav_menus(
-    array(
+    array( 
+      'center-home-menu' => __( 'Center Home Menu' ), 
       'secondary-link-right-menu' => __( 'Secondary Links Right Menu' ),
       'mobile-info-1' => __( 'mobile-info-1' ),
       'mobile-info-2' => __( 'mobile-info-2' ),
