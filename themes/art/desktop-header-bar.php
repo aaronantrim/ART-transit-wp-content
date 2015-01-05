@@ -7,7 +7,7 @@
 							<div id="transit-name" class="blue-border linked-div" rel="<?php echo get_site_url(); ?>" >Anaheim Resort Transportation</div>
 							<div id="desktop-main-links">
 								<ul>
-									<li id="get-passes-link" class="blue-border linked-div" rel="https://anaheim-transportation-network.myshopify.com">  
+									<li id="get-passes-link" class="blue-border linked-div" rel="<?php echo get_site_url();?>/fares-and-passes-2">  
 										<i></i>
 										<a href="http://rideart.org/fares-and-passes-2/">Get Passes</a>
 									</li>
