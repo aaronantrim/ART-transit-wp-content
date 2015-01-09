@@ -127,7 +127,7 @@ echo date_format(new DateTime(get_field('meeting_date')),"F j, Y");
 												</table>
 											<?php endif; ?>
  
- 											<a href="<?php echo get_site_url(); ?>/meetings-archive">Meetings Archive</a>
+ 										<!--	<a href="<?php echo get_site_url(); ?>/meetings-archive">Meetings Archive</a> -->
 											<?php wp_reset_query();
 											
 											
