@@ -1,6 +1,8 @@
 <?php
 
-
+/*
+Template Name: minutes_agendas_page
+*/
 
 
  get_header(); ?>
@@ -59,6 +61,76 @@
 										<!--<div id="page-anchor-links"><ul></ul></div>-->
 										<?php
 										}
+										
+									
+										
+									$args = array(
+												'numberposts' => 15,
+												'post_type' => 'board-meeting',
+											);
+ 
+											// get results
+											$the_query = new WP_Query( $args );
+ 
+											// The Loop
+											?>
+
+											<?php if( $the_query->have_posts() ): ?>
+												<table id="board-meeting-table" style="text-align: center;">
+												
+												<tr>
+													<?php if(current_user_can( 'manage_options' )) {
+														echo '<th>Edit Meeting<br/>(only visible to admin)</th>';
+													} ?>
+													<th>Meeting Date</th>
+													<th>Meeting Type</th>
+													<th>Agenda</th>
+													<th>Minutes</th>
+												</tr>
+												
+												<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+												<tr>
+													<?php if(current_user_can( 'manage_options' )) {
+														echo '<td><a href="'.get_edit_post_link().'">Edit</a></td>';
+													} ?>
+													
+
+												
+													<td><?php
+echo date_format(new DateTime(get_field('meeting_date')),"F j, Y");
+?></td>
+													<td><?php the_field('meeting_type'); ?></td>
+													<td>
+													<?php if(get_field('agenda_link') != "") {?>
+													 	<a href="<?php echo get_field('agenda_link'); ?>">Agenda Page</a>
+													 <?php } else if(get_field('agenda') != "") {?>
+														<a href="<?php echo get_field('agenda'); ?>">Agenda [PDF]</a>
+													<?php } else {?>
+													 -
+													 <?php } ?>
+													</td>
+													<td>
+													<?php if(get_field('minutes') != "") {?>
+														<a href="<?php echo get_field('board_meeting_minutes'); ?>">Minutes [PDF]</a>
+													<?php } else {?>
+													 -
+													 <?php } ?>
+													</td>
+												
+												</tr>
+												
+												
+											
+													
+												<?php endwhile; ?>
+												</table>
+											<?php endif; ?>
+ 
+ 											<a href="<?php echo get_site_url(); ?>/meetings-archive">Meetings Archive</a>
+											<?php wp_reset_query();
+											
+											
 										
 									 the_content(); 
 

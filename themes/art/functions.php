@@ -464,6 +464,41 @@ add_action( 'after_setup_theme', 'insert_category' );
  
 function codex_route_init() {
 
+$labels = array(
+		'name'               => _x( 'Board Meetings', 'post type general name' ),
+		'singular_name'      => _x( 'board-meeting', 'post type singular name' ),
+		'menu_name'          => _x( 'Board Meetings', 'admin menu'),
+		'name_admin_bar'     => _x( 'Board Meeting', 'add new on admin bar'),
+		'add_new'            => _x( 'Add New meeting', 'board-meeting'),
+		'add_new_item'       => __( 'Add New meeting'),
+		'new_item'           => __( 'New meeting'),
+		'edit_item'          => __( 'Edit meeting'),
+		'view_item'          => __( 'View meeting '),
+		'all_items'          => __( 'All meetings'),
+		'search_items'       => __( 'Search meetings'),
+		'parent_item_colon'  => __( 'Parent meeting:'),
+		'not_found'          => __( 'No meetings found.'),
+		'not_found_in_trash' => __( 'No meetings found in Trash.')
+	);
+
+	$args = array(
+		'menu_icon' => '',
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'board-meeting' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => true,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'revisions', 'thumbnail' )
+	);
+
+	register_post_type( 'board-meeting', $args );
+
 
 	$labels = array(
 		'name'               => _x( 'Routes &amp; Schedules', 'post type general name' ),
