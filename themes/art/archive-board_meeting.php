@@ -1,9 +1,5 @@
 <?php
 
-/*
-Template Name: minutes_agendas_page
-*/
-
 
  get_header(); ?>
 
@@ -62,10 +58,10 @@ Template Name: minutes_agendas_page
 										<?php
 										}
 										
-									
-										
-									$args = array(
-												'numberposts' => 15,
+									 the_content(); 
+									 
+									 	$args = array(
+												'numberposts' => -1,
 												'post_type' => 'board-meeting',
 											);
  
@@ -118,6 +114,7 @@ echo date_format(new DateTime(get_field('meeting_date')),"F j, Y");
 													 -
 													 <?php } ?>
 													</td>
+												
 												</tr>
 												
 												
@@ -127,12 +124,8 @@ echo date_format(new DateTime(get_field('meeting_date')),"F j, Y");
 												</table>
 											<?php endif; ?>
  
- 											<a href="<?php echo get_site_url(); ?>/?post_type=board-meeting">Meetings Archive</a> 
+ 										<!--	<a href="<?php echo get_site_url(); ?>/meetings-archive">Meetings Archive</a> -->
 											<?php wp_reset_query();
-											
-											
-										
-									 the_content(); 
 
 										/*
 										 * Link Pages is used in case you have posts that are set to break into
