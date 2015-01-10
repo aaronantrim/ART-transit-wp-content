@@ -67,6 +67,8 @@ Template Name: minutes_agendas_page
 									$args = array(
 												'numberposts' => 15,
 												'post_type' => 'board-meeting',
+												'meta_key' => 'board_meeting_date',
+												'order' => 'ASC'
 											);
  
 											// get results
@@ -125,9 +127,10 @@ echo date_format(new DateTime(get_field('meeting_date')),"F j, Y");
 													
 												<?php endwhile; ?>
 												</table>
+												<a href="<?php echo get_site_url(); ?>/?post_type=board-meeting">Meetings Archive</a> 
 											<?php endif; ?>
  
- 											<a href="<?php echo get_site_url(); ?>/?post_type=board-meeting">Meetings Archive</a> 
+ 											
 											<?php wp_reset_query();
 											
 											

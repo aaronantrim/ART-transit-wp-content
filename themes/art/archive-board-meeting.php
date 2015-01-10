@@ -63,6 +63,8 @@
 									 	$args = array(
 												'numberposts' => -1,
 												'post_type' => 'board-meeting',
+												'meta_key' => 'board_meeting_date',
+												'order' => 'ASC',
 											);
  
 											// get results
