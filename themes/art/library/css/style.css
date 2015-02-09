@@ -2170,7 +2170,7 @@ span.icon  {
 
 .home #interactive-map-holder, .single-route_line #interactive-map-holder {
   position: relative;
-  height: 830px; }
+  height: 560px; }
 
 #interactive-map-holder {
   background: #0d72ae;
