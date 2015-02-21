@@ -159,7 +159,7 @@ function bones_register_sidebars() {
         'name' => 'Footer Sidebar 2',
         'id' => 'footer-sidebar-2',
         'description' => 'Appears in the footer area2',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s footer-custom-menu">',
         'after_widget' => '</aside>'
     ) );
 
@@ -1469,5 +1469,26 @@ function makePlacePanel($_type, $_min, $_max) {
 
 
 
+//custom js at the end of footer.
+
+function resize_footer_script() {
+    ?>
+    <script type="text/javascript">
+        // This depends on jquery
+        $(document).ready(function(){
+            function resizeCustomMenuFooter(){
+                var win_w =  $(window).width();
+                $('#footer-sidebar2').outerWidth(win_w-$('#footer-sidebar1').outerWidth()-60);
+            };
+            resizeCustomMenuFooter();
+            $(window).on('resize', function(){
+                resizeCustomMenuFooter();
+            });
+
+        });
+    </script>
+<?php
+}
+add_action('wp_footer', 'resize_footer_script');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

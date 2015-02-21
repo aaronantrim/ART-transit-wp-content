@@ -1,31 +1,36 @@
 			<footer class="footer" role="contentinfo">
 				<div id="footer-sidebar" class="secondary">
 					<div id="footer-sidebar1">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
+						<img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/>
 						<?php
 						//if(is_active_sidebar('footer-sidebar-1'))
 						{
 							dynamic_sidebar('footer-sidebar-1');
 						}
 						?>
-						<a href="<?php echo get_permalink( 56); ?>" style="text-decoration: none; font-weight: bolder;" >More</a>
+
 					</div>
 					<div id="footer-sidebar2">
+						<div style="margin:10px;">
 						<form role="search" method="get" id="searchform" class="searchform" action="<?=$_SERVER['REMOTE_HOST'];?>">
 							<div style="line-height: 40px;">
-								<input type="text" value="" name="s" id="s" placeholder="search rideart.org" style="float: left;width: 200px;margin-right: 30px;">
+								<input class="search_query" type="text" value="" name="s" id="s" placeholder="search rideart.org">
 								<input type="submit" id="searchsubmit" value="Go »">
 							</div>
 						</form>
+						</div>
+						<div style="float:left; width:100%;">
 						<?php
 						//if(is_active_sidebar('footer-sidebar-2'))
 						{
 							dynamic_sidebar('footer-sidebar-2');
 						}
 						?>
-
+						</div>
+						<div id="footer-copyright" class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></div>
 					</div>
 				</div>
+
 				<!--<div id="inner-footer" class="wrap cf">
 
 					<nav role="navigation">
@@ -51,8 +56,6 @@
 
 
 			</footer>
-
-		</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>

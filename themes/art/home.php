@@ -218,7 +218,8 @@ $link .= "wp-content/themes/art/AnaheimMap/";
 							</div><!-- end #second-home-row-->
 						
 						</div><!-- end #home-secondary-container -->
-					
+
+				</div>
 <?php get_footer(); ?>
 				</div>
 				
