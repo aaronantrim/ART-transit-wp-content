@@ -148,6 +148,21 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 1',
+        'id' => 'footer-sidebar-1',
+        'description' => 'Appears in the footer area1',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>'
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Sidebar 2',
+        'id' => 'footer-sidebar-2',
+        'description' => 'Appears in the footer area2',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>'
+    ) );
+
 	/*
 	to add more sidebars or widgetized areas, just copy
 	and edit the above sidebar code. In order to call
@@ -227,6 +242,8 @@ function bones_fonts() {
   wp_enqueue_style( 'googleFonts');
   wp_register_style('route_icons', get_template_directory_uri().'/library/css/route-icons.css');
   wp_enqueue_style( 'route_icons');
+    wp_register_style('footer_styles', get_template_directory_uri().'/library/css/footer.css');
+    wp_enqueue_style( 'footer_styles');
 }
 
 add_action('wp_print_styles', 'bones_fonts');

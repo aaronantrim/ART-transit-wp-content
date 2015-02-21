@@ -211,9 +211,9 @@ $link .= "wp-content/themes/art/AnaheimMap/";
 										<q>“I just spent a few days with my girls at Disneyland and we rode the ART. The buses were great and people were very professional.” <br /><span class="quote-author">- Christina from Phoenix, AZ</span></q>
 										
 									</div>
-									<div id="description-text">Anaheim Resort Transportation (ART) is public transportation within the Anaheim Resort area of Orange County, California. The 20-route ART system provides convenient transportation that connects theme parks and other locations, including 50 hotels, more than 20 restaurants, and the ARTIC transportation center. Buses operate from early morning to late night on most days. Every year, ART buses carry more than 3 million residents, visitors, and employees in the Anaheim Resort region. ART is managed by Anaheim Transportation Network.
+									<!--<div id="description-text">Anaheim Resort Transportation (ART) is public transportation within the Anaheim Resort area of Orange County, California. The 20-route ART system provides convenient transportation that connects theme parks and other locations, including 50 hotels, more than 20 restaurants, and the ARTIC transportation center. Buses operate from early morning to late night on most days. Every year, ART buses carry more than 3 million residents, visitors, and employees in the Anaheim Resort region. ART is managed by Anaheim Transportation Network.
 									&nbsp;<a href="<?php echo get_permalink( 56); ?>" >More About Anaheim Resort Transportation Network</a>
-									</div><!-- end #description-text -->
+									</div>--><!-- end #description-text -->
 								</div> <!-- end #home-description-of-services -->
 							</div><!-- end #second-home-row-->
 						

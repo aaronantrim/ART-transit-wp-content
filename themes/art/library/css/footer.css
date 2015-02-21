@@ -1,0 +1,23 @@
+#footer-sidebar {
+    display:block;
+}
+
+#footer-sidebar1 {
+    float: left;
+    width: 360px;
+    margin: 30px 0px 30px 30px;
+    border-right: 1px solid grey;
+    padding-right: 30px;
+}
+
+#footer-sidebar2 {
+    float: left;
+    /*width: 340px;*/
+    margin: 30px 30px 30px 0px;
+    padding-left: 30px;
+}
+
+#footer-sidebar3 {
+    float: left;
+    width: 340px;
+}
