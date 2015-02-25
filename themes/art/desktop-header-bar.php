@@ -136,7 +136,7 @@
 									</li>
 								</ul>
 							</div><!-- end #desktop-main-links -->
-							<div id="phone-number"><a href="tel:7145635287">Info: (714) 563-5287</a></div>
+							<div id="phone-number"><a href="tel:8883642787">Info: (888) 364-2787</a></div>
 						</div><!-- end top-blue-link-banner -->
 					</div>
 		</header>
