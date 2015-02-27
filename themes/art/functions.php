@@ -238,12 +238,16 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
+  global $wp_styles;
   wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
   wp_enqueue_style( 'googleFonts');
   wp_register_style('route_icons', get_template_directory_uri().'/library/css/route-icons.css');
   wp_enqueue_style( 'route_icons');
-    wp_register_style('footer_styles', get_template_directory_uri().'/library/css/footer.css');
-    wp_enqueue_style( 'footer_styles');
+  wp_register_style('footer_styles', get_template_directory_uri().'/library/css/footer.css');
+  wp_enqueue_style( 'footer_styles');
+  wp_register_style('footer_styles_ie', get_template_directory_uri().'/library/css/footer-ie.css');
+  wp_enqueue_style( 'footer_styles_ie');
+  $wp_styles->add_data( 'footer_styles_ie', 'conditional', 'gt IE 9' );
 }
 
 add_action('wp_print_styles', 'bones_fonts');
