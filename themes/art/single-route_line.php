@@ -470,14 +470,7 @@ echo $stop_table_html;
 
 
 <?php
-
-$route_js_array = "";
-$id_count = 0;
-foreach($route_ids as &$_route_id) {
-$route_js_array .= $_route_id;
-if($id_count < sizeof($route_ids)-1) {$route_js_array .= ',';} 
-$id_count ++;
-}
+$route_js_array = implode(",",$route_ids);
  ?>
  
 <?php
